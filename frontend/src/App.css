@@ -1,0 +1,33 @@
+body {
+  margin-top: 20px;
+}
+
+.Header {
+  background-color: red;
+  border: 2px solid;
+  min-width: 360px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.WelcomeFeed {
+  background-color: green;
+  height: 20vh;
+  margin-top: 10px;
+  min-width: 360px;
+  height: 200px;
+}
+
+.Game { 
+  display: flex;
+  justify-content: center; 
+  margin-top: 10vh;
+}
+
+.Footer {
+  background-color: blue; 
+  margin-top: 25vh;
+  min-width: 360px;
+  height: 40px;
+}
