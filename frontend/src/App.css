@@ -25,6 +25,14 @@ body {
   margin-top: 10vh;
 }
 
+.Categories {
+  background-color: black;
+  height: 20vh;
+  margin-top: 10px;
+  min-width: 360px;
+  height: 200px;
+}
+
 .Footer {
   background-color: blue; 
   margin-top: 25vh;

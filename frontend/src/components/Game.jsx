@@ -1,9 +1,18 @@
 import React from 'react'
 import Button from '@mui/material/Button';
+import axios from 'axios';
 
-function Game() {
+function Game({categories}) {
+
+  function startGame() {    //axios 
+
+    
+
+
+  }
+
   return (
-    <div className='Game'><Button variant="contained">Start Game</Button>
+    <div className='Game'><Button variant="contained" onClick={startGame}>Start Game</Button>
     </div>
   )
 }
