@@ -7,7 +7,8 @@ const port = 8000   //react nutzt 3000
 var questions = {
 	Weltall: [
 		{
-      id: "W1",
+      id: "1",
+      Kategorie: "Weltraum",
       question: "Welcher Planet unseres Sonnensystems ist am dichtesten zur Sonne",
       answerA: "Venus",
       answerB: "Merkur",  //+
@@ -15,7 +16,8 @@ var questions = {
       answerD: "Uranus"
     },
     {
-      id: "W2",
+      id: "2",
+      Kategorie: "Weltraum",
       question: "",
       answerA: "Antwort",
       answerB: "Antwort",
