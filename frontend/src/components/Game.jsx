@@ -5,10 +5,7 @@ import axios from 'axios';
 function Game({categories}) {
 
   function startGame() {    //axios 
-
-    
-
-
+    console.log(categories)
   }
 
   return (

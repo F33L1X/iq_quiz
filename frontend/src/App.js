@@ -10,28 +10,14 @@ import { useEffect, useState } from "react";
 //import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 async function loadCategories() {
-
   var config = {
     method: 'get',
     url: '/api/categories',
-    headers: { 
-    //  'Content-Type': 'application/json'  //zu klären
-    },
-    
+    headers: {},
   };
-  
-  axios(config)
-  .then(function (response) {
-    console.log(JSON.stringify(response.data));
-    return JSON.stringify(response.data);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+  const response = await axios(config); 
+  return response.data;
 }
-
-
-
 
 //sm md lg noch definierten
 function App() {
@@ -41,14 +27,13 @@ function App() {
   useEffect(() => {
     loadCategories().then(res => {
       setCategories(res)
-      console.log (res)
     });
   }, []);
 
   return(
     <Grid item xs={12} justifyContent="center" alignItems="center" irection="row" container rowSpacing={2} columnSpacing={2}>
       <Grid item xs={12}>  
-        <Header ></Header>
+        <Header></Header>
       </Grid>
       <Grid item xs={12}>
         <WelcomeFeed></WelcomeFeed>
