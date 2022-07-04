@@ -2,10 +2,12 @@ import React from 'react'
 import Button from '@mui/material/Button';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
+import { createTheme } from '@mui/material/styles';
 
 
 
-function Game({categories}) {
+
+function GameStart({categories}) {
 
   const navigate = useNavigate();
 
@@ -24,4 +26,4 @@ function Game({categories}) {
   )
 }
 
-export default Game
+export default GameStart

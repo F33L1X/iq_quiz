@@ -1,13 +1,14 @@
 import './App.css';
-import Header from './components/Header';
+import './Nav.css';
 import Footer from './components/Footer';
-import Game from './components/Game';
+import GameStart from './components/GameStart';
 import WelcomeFeed from './components/WelcomeFeed';
 import Grid from '@mui/material/Grid';
 import axios from 'axios';
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CategorieChoose from './components/CategorieChoose';
+import Navbar from './components/NavBar'
 //import DenseTable from './components/Scoreboard'   //->Soll angezeigt werden wenn Game gepielt wurde
 
 async function loadCategories() {
@@ -37,7 +38,7 @@ function App() {
     <BrowserRouter>
         <Grid item xs={12} justifyContent="center" alignItems="center" irection="row" container rowSpacing={10} columnSpacing={2}>
           <Grid item xs={12} >  
-            <Header></Header>
+            <Navbar></Navbar>
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={12} justifyContent="center" alignItems="center" irection="row" container rowSpacing={0} columnSpacing={0} >
             <Routes>
@@ -47,7 +48,7 @@ function App() {
           </Grid>
           <Grid item xs={12}>
             <Routes>
-              <Route path ="/" element={<Game categories={categories}/>}  />
+              <Route path ="/" element={<GameStart categories={categories}/>}  />
             </Routes>
           </Grid>
           <Grid item xs={12} rowSpacing={10}>
