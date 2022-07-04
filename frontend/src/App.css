@@ -26,7 +26,7 @@ body {
   margin-top: 10vh;
 }
 
-.Categories {
+.CategorieChoose {
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -41,8 +41,8 @@ body {
   height: 100px;
   margin: 5px;
   border-radius: 10px;
-  
   box-shadow: 5px 2px 7px 0px;
+  flex: 1 0 33%; 
 }
 
 .InnerText {
@@ -52,12 +52,6 @@ body {
   text-align: center;
   
 }
-
-.WeltallPic{
-  width: 100px;
-  border-radius: 10px;
-}
-
 
 .Footer {
   background-color: blue; 

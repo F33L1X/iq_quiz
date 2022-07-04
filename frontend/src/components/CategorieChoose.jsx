@@ -52,8 +52,8 @@ function CategorieChoose({categories}) {
   }
 
   return (
-
-    <div className="Categories">
+    
+    <div className="CategorieChoose">
       <div className="box" style={{ backgroundImage:`url(${image1})`,backgroundRepeat:"no-repeat", backgroundSize:"cover"}}  onClick={QuizGameWeltall}><p className="InnerText">Weltall</p></div>
       <div className="box" style={{ backgroundImage:`url(${image2})`,backgroundRepeat:"no-repeat", backgroundSize:"cover"}} onClick={QuizGameNature}><p className="InnerText">Natur</p></div>
       <div className="box"style={{ backgroundImage:`url(${image3})`,backgroundRepeat:"no-repeat", backgroundSize:"cover"}} onClick={QuizGameGeschichte}><p className="InnerText">Geschichte</p></div>
@@ -61,6 +61,7 @@ function CategorieChoose({categories}) {
       <div className="box"style={{ backgroundImage:`url(${image5})`,backgroundRepeat:"no-repeat", backgroundSize:"cover"}} onClick={QuizGameGeografie}><p className="InnerText">Geografie</p></div>
       <div className="box"style={{ backgroundImage:`url(${image6})`,backgroundRepeat:"no-repeat", backgroundSize:"cover"}} onClick={QuizGameMenschen}><p className="InnerText">Menschen</p></div>
     </div>
+    
     //<div className="Categories"><div className="Weltall"></div></div>
   )
 }

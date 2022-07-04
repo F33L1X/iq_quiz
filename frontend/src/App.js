@@ -8,7 +8,7 @@ import axios from 'axios';
 //import Categories from './components/Categories';
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CategorieChoose from './components/Categories';
+import CategorieChoose from './components/CategorieChoose';
 
 async function loadCategories() {
   var config = {
@@ -35,10 +35,10 @@ function App() {
     
     <BrowserRouter>
         <Grid item xs={12} justifyContent="center" alignItems="center" irection="row" container rowSpacing={2} columnSpacing={2}>
-          <Grid item xs={12}>  
+          <Grid item xs={12} >  
             <Header></Header>
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} justifyContent="center" alignItems="center" irection="row" container>
             <Routes>
               <Route path ="/" element={<WelcomeFeed />} />
               <Route path ="/api/categories" element={<CategorieChoose />} />
