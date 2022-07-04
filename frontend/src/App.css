@@ -13,17 +13,23 @@ body {
 }
 
 .WelcomeFeed {
+  display: flex;
+  justify-content: center;
   background-color: green;
   height: 20vh;
-  margin-top: 10px;
-  min-width: 360px;
   height: 200px;
 }
 
-.Game { 
+.StartArea { 
   display: flex;
+  flex-wrap: wrap;
   justify-content: center; 
-  margin-top: 10vh;
+  margin-top: 10%;
+}
+
+.GameNote {
+  min-width: 245px;
+  margin-bottom: 10%;
 }
 
 .CategorieChoose {

@@ -6,4 +6,4 @@ function WelcomeFeed() {
   )
 }
 
-export default WelcomeFeed
+export default WelcomeFeed;

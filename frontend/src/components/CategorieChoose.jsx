@@ -7,24 +7,22 @@ import image4 from "../imgs/Physik.jpg";
 import image5 from "../imgs/Geografie.jpg";
 import image6 from "../imgs/Menschen.jpg";
 
-
-//const weltallPic = new URL ("../imgs/Weltall.jpg",import.meta.url)
-
-function CategorieChoose({categories}) {
+//mit Sebastian questions
+function CategorieChoose({categories, questions}) {
 
   //const navigate = useNavigate();
 
   function QuizGameWeltall () {
     console.log("TestWeltall")
     //navigate ('/api/quizgame');
-    console.log({categories})
+    console.log(questions)
 
   }
 
   function QuizGameNature () {
     console.log("TestNature")
     //navigate ('/api/quizgame');
-
+    console.log(categories)
   }
 
   function QuizGameGeschichte () {
@@ -61,11 +59,6 @@ function CategorieChoose({categories}) {
       <div className="box"style={{ backgroundImage:`url(${image5})`,backgroundRepeat:"no-repeat", backgroundSize:"cover"}} onClick={QuizGameGeografie}><p className="InnerText">Geografie</p></div>
       <div className="box"style={{ backgroundImage:`url(${image6})`,backgroundRepeat:"no-repeat", backgroundSize:"cover"}} onClick={QuizGameMenschen}><p className="InnerText">Menschen</p></div>
     </div>
-    
-    //<div className="Categories"><div className="Weltall"></div></div>
   )
 }
-
-export default CategorieChoose
-
-//<img className='WeltallPic' src={weltallPic}/>
+export default CategorieChoose;

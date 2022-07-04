@@ -19,11 +19,12 @@ async function loadCategories() {
   const response = await axios(config); 
   return response.data;
 }
-
+//async function für questions
 //sm md lg noch definierten
 function App() {
 
   const [categories, setCategories] = useState([]);
+  const [questions, setQeustions] = useState([]);   //mit Sebastian
 
   useEffect(() => {
     loadCategories().then(res => {
@@ -41,7 +42,7 @@ function App() {
           <Grid item xs={12} justifyContent="center" alignItems="center" irection="row" container>
             <Routes>
               <Route path ="/" element={<WelcomeFeed />} />
-              <Route path ="/api/categories" element={<CategorieChoose />} />
+              <Route path ="/api/categories" element={<CategorieChoose categories={categories} questions={questions} />} />
             </Routes>
           </Grid>
           <Grid item xs={2}>
