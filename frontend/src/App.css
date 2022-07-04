@@ -13,11 +13,9 @@ body {
 }
 
 .WelcomeFeed {
-  display: flex;
-  justify-content: center;
   background-color: green;
   height: 20vh;
-  height: 200px;
+  
 }
 
 .StartArea { 
