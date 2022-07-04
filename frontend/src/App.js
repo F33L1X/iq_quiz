@@ -7,7 +7,8 @@ import Grid from '@mui/material/Grid';
 import axios from 'axios';
 //import Categories from './components/Categories';
 import { useEffect, useState } from "react";
-//import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CategorieChoose from './components/Categories';
 
 async function loadCategories() {
   var config = {
@@ -32,20 +33,27 @@ function App() {
 
   return(
     
-      <Grid item xs={12} justifyContent="center" alignItems="center" irection="row" container rowSpacing={2} columnSpacing={2}>
-        <Grid item xs={12}>  
-          <Header></Header>
+    <BrowserRouter>
+        <Grid item xs={12} justifyContent="center" alignItems="center" irection="row" container rowSpacing={2} columnSpacing={2}>
+          <Grid item xs={12}>  
+            <Header></Header>
+          </Grid>
+          <Grid item xs={12}>
+            <Routes>
+              <Route path ="/" element={<WelcomeFeed />} />
+              <Route path ="/api/categories" element={<CategorieChoose />} />
+            </Routes>
+          </Grid>
+          <Grid item xs={2}>
+            <Routes>
+              <Route path ="/" element={<Game categories={categories}/>}  />
+            </Routes>
+          </Grid>
+          <Grid item xs={12}>
+            <Footer></Footer>
+          </Grid>
         </Grid>
-        <Grid item xs={12}>
-          <WelcomeFeed></WelcomeFeed>
-        </Grid>
-        <Grid item xs={2}>
-          <Game categories={categories}></Game>
-        </Grid>
-        <Grid item xs={12}>
-          <Footer></Footer>
-        </Grid>
-      </Grid>
+      </BrowserRouter>
   
 )}
   

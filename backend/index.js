@@ -6,8 +6,11 @@ const port = 8000   //react nutzt 3000
 
 var categories = [
   "Weltraum",
-  "B",
-  "C"
+  "Natur",
+  "Geschichte",
+  "Physik",
+  "Geografie",
+  "Menschen"
 ]
 
 
@@ -45,13 +48,35 @@ app.get('/api/question', (req, res) => {    //http://localhost:8000/api/question
     }) 
   })
 
-app.get('/api/questions', (req, res) => {    //http://localhost:8000/api/questions?id=1
+app.get('/api/questions', (req, res) => {    
       res.status(200).send(questions)
  })
 
- app.get('/api/categories', (req, res) => {    //http://localhost:8000/api/questions?id=1
+app.get('/api/categories', (req, res) => {    
   res.status(200).send(categories)
 })
+
+
+//Game Categories   <-----
+app.get('/api/quizgameWeltall', (req, res) => {   
+  res.status(200).send(categories)
+})
+app.get('/api/quizgameNature', (req, res) => {   
+  res.status(200).send(categories)
+})
+app.get('/api/quizgameGeschichte', (req, res) => {   
+  res.status(200).send(categories)
+})
+app.get('/api/quizgamePhysik', (req, res) => {   
+  res.status(200).send(categories)
+})
+app.get('/api/quizgameGeografie', (req, res) => {   
+  res.status(200).send(categories)
+})
+app.get('/api/quizgameMenschen', (req, res) => {   
+  res.status(200).send(categories)
+})
+//Game Categories End   <-----
 
 
   

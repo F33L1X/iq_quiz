@@ -1,11 +1,12 @@
 body {
   margin-top: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: wheat;
 }
 
 .Header {
   background-color: red;
   border: 2px solid;
-  min-width: 360px;
   height: 20px;
   display: flex;
   justify-content: center;
@@ -26,16 +27,39 @@ body {
 }
 
 .Categories {
-  background-color: black;
-  height: 20vh;
-  margin-top: 10px;
-  min-width: 360px;
-  height: 200px;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: stretch;
 }
+
+.box{
+  background-color: beige;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  border-radius: 10px;
+  
+  box-shadow: 5px 2px 7px 0px;
+}
+
+.InnerText {
+  position: relative;
+  color:whitesmoke;
+  text-shadow: 1px 1px black;
+  text-align: center;
+  
+}
+
+.WeltallPic{
+  width: 100px;
+  border-radius: 10px;
+}
+
 
 .Footer {
   background-color: blue; 
-  margin-top: 25vh;
-  min-width: 360px;
-  height: 40px;
+  
 }
