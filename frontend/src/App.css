@@ -16,17 +16,20 @@ body {
   background-color: lightskyblue;
   border-radius: 20px;
   border: 1px double;
-  height: 200px;
+  height: 180px;
   width: fit-content;
 }
 
 .ScoreTitle {
   list-style: none;
-  padding: 15px;
+  padding: 16px;
+  max-width: 360px;
+  font-family: fantasy;
 }
 .Score {
-  padding: 20px;
+  padding: 15px;
   list-style-type: square;
+  font-family: monospace;
 }
 
 .StartArea { 
@@ -34,6 +37,11 @@ body {
 }
 .GameNote {
   margin: 15px;
+  font-style: italic;
+  font-weight: 200;
+  font-family: monospace;
+  font-weight: bold;
+ 
 }
 
 

@@ -17,7 +17,7 @@ function Game({categories}) {
 
   return (
     <div className="StartArea">
-      <div className="GameNote">Es gibt nur einen Versuch!</div>
+      <div className="GameNote">Es gibt nur einen Durchlauf pro Spieler!</div>
       <div className='GameButton'><Button variant="contained" onClick={startGame}>Start Game</Button>
       </div>
     </div>

@@ -5,10 +5,10 @@ import Game from './components/Game';
 import WelcomeFeed from './components/WelcomeFeed';
 import Grid from '@mui/material/Grid';
 import axios from 'axios';
-//import Categories from './components/Categories';
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CategorieChoose from './components/CategorieChoose';
+//import DenseTable from './components/Scoreboard'   //->Soll angezeigt werden wenn Game gepielt wurde
 
 async function loadCategories() {
   var config = {
@@ -41,7 +41,7 @@ function App() {
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={12} justifyContent="center" alignItems="center" irection="row" container rowSpacing={0} columnSpacing={0} >
             <Routes>
-              <Route path ="/" element={<WelcomeFeed />} />
+              <Route path ="/" element={<WelcomeFeed />} /> 
               <Route path ="/api/categories" element={<CategorieChoose categories={categories} questions={questions} />} />
             </Routes>
           </Grid>
