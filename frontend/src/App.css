@@ -1,34 +1,45 @@
 body {
   margin-top: 20px;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: wheat;
+  background: linear-gradient(90deg, rgba(162,153,147,1) 9%, rgba(217,212,190,1) 48%, rgba(162,153,147,1) 92%);
 }
 
 .Header {
-  background-color: red;
+  background-color: crimson;
   border: 2px solid;
   height: 20px;
   display: flex;
   justify-content: center;
 }
 
-.WelcomeFeed {
-  background-color: green;
-  height: 20vh;
-  
+.ScoreContainer {
+  background-color: lightskyblue;
+  border-radius: 20px;
+  border: 1px double;
+  height: 200px;
+  width: fit-content;
+}
+
+.ScoreTitle {
+  list-style: none;
+  padding: 15px;
+}
+.Score {
+  padding: 20px;
+  list-style-type: square;
 }
 
 .StartArea { 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; 
-  margin-top: 10%;
+  text-align: center;
+}
+.GameNote {
+  margin: 15px;
 }
 
-.GameNote {
-  min-width: 245px;
-  margin-bottom: 10%;
-}
+
+
+
+
 
 .CategorieChoose {
   display:flex;
@@ -58,6 +69,8 @@ body {
 }
 
 .Footer {
-  background-color: blue; 
-  
+  background-color: grey; 
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
 }

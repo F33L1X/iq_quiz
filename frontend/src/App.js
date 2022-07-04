@@ -35,22 +35,22 @@ function App() {
   return(
     
     <BrowserRouter>
-        <Grid item xs={12} justifyContent="center" alignItems="center" irection="row" container rowSpacing={2} columnSpacing={2}>
+        <Grid item xs={12} justifyContent="center" alignItems="center" irection="row" container rowSpacing={10} columnSpacing={2}>
           <Grid item xs={12} >  
             <Header></Header>
           </Grid>
-          <Grid item xs={12} justifyContent="center" alignItems="center" irection="row" container>
+          <Grid item xs={12} sm={12} md={12} lg={12} justifyContent="center" alignItems="center" irection="row" container rowSpacing={0} columnSpacing={0} >
             <Routes>
               <Route path ="/" element={<WelcomeFeed />} />
               <Route path ="/api/categories" element={<CategorieChoose categories={categories} questions={questions} />} />
             </Routes>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={12}>
             <Routes>
               <Route path ="/" element={<Game categories={categories}/>}  />
             </Routes>
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} rowSpacing={10}>
             <Footer></Footer>
           </Grid>
         </Grid>

@@ -17,8 +17,8 @@ function Game({categories}) {
 
   return (
     <div className="StartArea">
-      <div className="GameNote">ALARM: Es gibt nur einen Versuch!</div>
-      <div className='Game'><Button variant="contained" onClick={startGame}>Start Game</Button>
+      <div className="GameNote">Es gibt nur einen Versuch!</div>
+      <div className='GameButton'><Button variant="contained" onClick={startGame}>Start Game</Button>
       </div>
     </div>
   )
