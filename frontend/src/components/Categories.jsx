@@ -17,7 +17,7 @@ function CategorieChoose({categories}) {
   function QuizGameWeltall () {
     console.log("TestWeltall")
     //navigate ('/api/quizgame');
-    console.log({Categories})
+    console.log({categories})
 
   }
 
