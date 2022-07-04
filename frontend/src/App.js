@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import axios from 'axios';
 //import Categories from './components/Categories';
 import { useEffect, useState } from "react";
-//import { BrowserRouter, Routes, Route } from "react-router-dom";
+//import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 async function loadCategories() {
   var config = {
@@ -31,20 +31,22 @@ function App() {
   }, []);
 
   return(
-    <Grid item xs={12} justifyContent="center" alignItems="center" irection="row" container rowSpacing={2} columnSpacing={2}>
-      <Grid item xs={12}>  
-        <Header></Header>
+    
+      <Grid item xs={12} justifyContent="center" alignItems="center" irection="row" container rowSpacing={2} columnSpacing={2}>
+        <Grid item xs={12}>  
+          <Header></Header>
+        </Grid>
+        <Grid item xs={12}>
+          <WelcomeFeed></WelcomeFeed>
+        </Grid>
+        <Grid item xs={2}>
+          <Game categories={categories}></Game>
+        </Grid>
+        <Grid item xs={12}>
+          <Footer></Footer>
+        </Grid>
       </Grid>
-      <Grid item xs={12}>
-        <WelcomeFeed></WelcomeFeed>
-      </Grid>
-      <Grid item xs={2}>
-        <Game categories={categories}></Game>
-      </Grid>
-      <Grid item xs={12}>
-        <Footer></Footer>
-      </Grid>
-    </Grid>
+  
 )}
   
 export default App;
