@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CategorieChoose from './components/CategorieChoose';
 import Navbar from './components/NavBar'
+import SpaceGame from './components/SpaceGame'
 //import DenseTable from './components/Scoreboard'   //->Soll angezeigt werden wenn Game gepielt wurde
 
 async function loadCategories() {
@@ -44,6 +45,7 @@ function App() {
             <Routes>
               <Route path ="/" element={<WelcomeFeed />} /> 
               <Route path ="/api/categories" element={<CategorieChoose categories={categories} questions={questions} />} />
+              <Route path ="/api/quizgameWeltall" element={<SpaceGame />} /> 
             </Routes>
           </Grid>
           <Grid item xs={12}>

@@ -314,7 +314,7 @@ app.get('/api/categories', (req, res) => {
 
 //Game Categories   <-----
 app.get('/api/quizgameWeltall', (req, res) => {   
-  res.status(200).send(categories)
+  res.status(200).send(questions)
 })
 app.get('/api/quizgameNature', (req, res) => {   
   res.status(200).send(categories)

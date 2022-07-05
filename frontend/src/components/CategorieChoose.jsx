@@ -6,16 +6,18 @@ import image3 from "../imgs/History.jpg";
 import image4 from "../imgs/Physik.jpg";
 import image5 from "../imgs/Geografie.jpg";
 import image6 from "../imgs/Menschen.jpg";
+import {useNavigate} from 'react-router-dom';
 
 //mit Sebastian questions
 function CategorieChoose({categories, questions}) {
 
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
   function QuizGameWeltall () {
     console.log("TestWeltall")
     //navigate ('/api/quizgame');
     console.log(questions)
+    navigate ('/api/quizgameWeltall');
 
   }
 
