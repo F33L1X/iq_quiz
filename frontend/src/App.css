@@ -1,17 +1,8 @@
 body {
-  margin-top: 20px;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   background: linear-gradient(90deg, rgba(162,153,147,1) 9%, rgba(217,212,190,1) 48%, rgba(162,153,147,1) 92%);
 }
-
-.Header {
-  background-color: crimson;
-  border: 2px solid;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-}
-
 
 .ScoreContainer {
   background-color: lightskyblue;
@@ -42,7 +33,6 @@ body {
   font-weight: 200;
   font-family: monospace;
   font-weight: bold;
- 
 }
 
 
@@ -79,12 +69,64 @@ body {
   color:whitesmoke;
   text-shadow: 1px 1px black;
   text-align: center;
+}
+
+
+
+
+
+
+.QuizContainer {
+  display: grid;
+  grid-template-columns: 120px 5vw 120px;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 2px 4px 8px 1px;
   
 }
+.GameFrage {
+  background-color: #9c5a54;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  border: 2px solid;
+  border-radius: 5px;
+  
+}
+.AntwortLeft {
+  background-color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border-radius: 5px;
+}
+.AntwortRight {
+  background-color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
 
 .Footer {
   background-color: grey; 
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 100%;
+  
+  
 }
