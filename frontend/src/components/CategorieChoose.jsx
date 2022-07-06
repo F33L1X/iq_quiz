@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from "react";
 //import {useNavigate} from 'react-router-dom';
 import image1 from "../imgs/Weltall.jpg";
 import image2 from "../imgs/Nature.jpg";
@@ -12,6 +13,12 @@ import {useNavigate} from 'react-router-dom';
 function CategorieChoose({categories, questions}) {
 
   const navigate = useNavigate();
+  useEffect(() => {
+    console.log("c",categories);
+    console.log("q",questions);
+
+
+  }, [])
 
   function QuizGameWeltall () {
     console.log("TestWeltall")

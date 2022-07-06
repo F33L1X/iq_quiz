@@ -11,6 +11,18 @@ import Navbar from './components/NavBar'
 import QuizGame from './components/QuizGame'
 //import DenseTable from './components/Scoreboard'   //->Soll angezeigt werden wenn Game gepielt wurde
 
+async function loadQuestions() {
+  var config = {
+    method: 'get',
+    url: '/api/questions',
+    headers: {},
+  };
+  const response = await axios(config); 
+  return response.data;
+}
+
+
+
 async function loadCategories() {
   var config = {
     method: 'get',
@@ -25,11 +37,14 @@ async function loadCategories() {
 function App() {
 
   const [categories, setCategories] = useState([]);
-  const [questions, setQeustions] = useState([]);   //mit Sebastian
+  const [questions, setQuestions] = useState([]);   //mit Sebastian
 
   useEffect(() => {
     loadCategories().then(res => {
       setCategories(res)
+    });
+    loadQuestions().then(res => {
+      setQuestions(res)
     });
   }, []);
 
