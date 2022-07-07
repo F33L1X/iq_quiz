@@ -59,7 +59,7 @@ function App() {
             <Routes>
               <Route path ="/" element={<WelcomeFeed />} /> 
               <Route path ="/api/categories" element={<CategorieChoose categories={categories} questions={questions} />} />
-              <Route path ="/api/quizgameWeltall" element={<QuizGame questions={questions} />} /> 
+              <Route path ="/api/quizgame" element={<QuizGame questions={questions} />} /> 
             </Routes>
           </Grid>
           <Grid item xs={12}>
