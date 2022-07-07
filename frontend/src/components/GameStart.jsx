@@ -13,7 +13,7 @@ function GameStart({categories}) {
 
   function startGame() {    //axios 
     console.log(categories)
-    navigate ('/api/categories');
+    navigate ('/categories');
     
   }
 

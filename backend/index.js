@@ -313,24 +313,10 @@ app.get('/api/categories', (req, res) => {
 
 
 //Game Categories   <-----
-app.get('/api/quizgameWeltall', (req, res) => {   
+app.get('/api/quizgame', (req, res) => {   
   res.status(200).send(questions)
 })
-app.get('/api/quizgameNature', (req, res) => {   
-  res.status(200).send(categories)
-})
-app.get('/api/quizgameGeschichte', (req, res) => {   
-  res.status(200).send(categories)
-})
-app.get('/api/quizgamePhysik', (req, res) => {   
-  res.status(200).send(categories)
-})
-app.get('/api/quizgameGeografie', (req, res) => {   
-  res.status(200).send(categories)
-})
-app.get('/api/quizgameMenschen', (req, res) => {   
-  res.status(200).send(categories)
-})
+
 //Game Categories End   <-----
 
 

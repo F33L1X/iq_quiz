@@ -10,35 +10,35 @@ import image6 from "../imgs/Menschen.jpg";
 import {useNavigate} from 'react-router-dom';
 
 //mit Sebastian questions
-function CategorieChoose() {
+function CategorieChoose({setActiveCategory}) {
 
-  const [check, setCheck] = useState("0");
+  
 
   const navigate = useNavigate();
 
   function QuizGameWeltraum () {
-    setCheck("Weltraum")
-    navigate ('/api/quizgame');
+    setActiveCategory("Weltraum")
+    navigate ('/quizgame');
   }
   function QuizGameNature () {
-    setCheck("Nature")
-    navigate ('/api/quizgame');
+    setActiveCategory("Nature")
+    navigate ('/quizgame');
   }
   function QuizGameHistory () {
-    setCheck("History")
-    navigate ('/api/quizgame');
+    setActiveCategory("History")
+    navigate ('/quizgame');
   }
   function QuizGamePhysik () {
-    setCheck("Physik")
-    navigate ('/api/quizgame'); 
+    setActiveCategory("Physik")
+    navigate ('/quizgame'); 
   }
   function QuizGameGeografie () {
-    setCheck("Geografie")
-    navigate ('/api/quizgame'); 
+    setActiveCategory("Geografie")
+    navigate ('/quizgame'); 
   }
   function QuizGameMenschen () {
-    setCheck("Menschen")
-    navigate ('/api/quizgame');
+    setActiveCategory("Menschen")
+    navigate ('/quizgame');
   }
 
 
