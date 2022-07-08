@@ -12,8 +12,6 @@ import {useNavigate} from 'react-router-dom';
 //mit Sebastian questions
 function CategorieChoose({setActiveCategory}) {
 
-  
-
   const navigate = useNavigate();
 
   function QuizGameWeltraum () {
@@ -21,11 +19,11 @@ function CategorieChoose({setActiveCategory}) {
     navigate ('/quizgame');
   }
   function QuizGameNature () {
-    setActiveCategory("Nature")
+    setActiveCategory("Natur")
     navigate ('/quizgame');
   }
   function QuizGameHistory () {
-    setActiveCategory("History")
+    setActiveCategory("Geschichte")
     navigate ('/quizgame');
   }
   function QuizGamePhysik () {
