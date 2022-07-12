@@ -39,7 +39,12 @@ function App() {
   const [categories, setCategories] = useState([]);
   const [questions, setQuestions] = useState([]);   //mit Sebastian
   const [activeCategory, setActiveCategory] = useState("");
-  const [questionStep, setQuestionStep] = useState(0);
+  const [questionStep, setQuestionStep] = useState(1);
+  const [answerA, setAnswerA] = useState(-1);
+  const [answerB, setAnswerB] = useState(-1);
+  const [answerC, setAnswerC] = useState(-1);
+  const [answerD, setAnswerD] = useState(-1);
+  const [answer, setAnswer] = useState([]);
 
   useEffect(() => {
     loadCategories().then(res => {
@@ -61,7 +66,7 @@ function App() {
             <Routes>
               <Route path ="/" element={<WelcomeFeed />} /> 
               <Route path ="/categories" element={<CategorieChoose categories={categories} questions={questions} setActiveCategory={setActiveCategory} />} />
-              <Route path ="/quizgame" element={<QuizGame questions={questions} activeCategory={activeCategory} questionStep={questionStep} setQuestionStep={setQuestionStep}/>} /> 
+              <Route path ="/quizgame" element={<QuizGame questions={questions} activeCategory={activeCategory} questionStep={questionStep} setQuestionStep={setQuestionStep} answer={answer} setAnswer={setAnswer}/>} />
             </Routes>
           </Grid>
           <Grid item xs={12}>

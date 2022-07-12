@@ -1,8 +1,8 @@
 import React from 'react'
+import Button from '@mui/material/Button';
 import { useState, useEffect } from "react";
 
-
-function QuizGame({questions, activeCategory, questionStep, setQuestionStep}) {
+function QuizGame({questions, activeCategory, questionStep, setQuestionStep, answerA, setAnswerA, answerB, setAnswerB, answerC, setAnswerC, answerD, setAnswerD}) {
 
   const [question, setQuestion] = useState("");
 
@@ -10,23 +10,32 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep}) {
   // du nun auch die Antworten, etc. anzeigen
   const getQuestion = () => {
     const result = questions.filter(e => e.Kategorie === activeCategory); 
-    console.log(questions, activeCategory, questionStep, result)
-    return result[questionStep+1].question;
+    console.log(questionStep)
+    return result[questionStep-1].question;
   }
+
+  // Code von Sebastian
+  const getAnswers = () => {
+    const resultA = questions.filter(e => e.Kategorie === activeCategory); 
+    
+    return resultA[questionStep+1].answerA;
+  }
+
+  
 
   useEffect(() => {
     setQuestion(getQuestion());
+    //setAnswer(getAnswer());
   }, []);
-  // Code von Sebastian
 
   return (
     <div>Frage 1/10; 00:01
       <div className='QuizContainer'>
         <div className='GameFrage'>{question}</div>
-        <div className='AntwortLeft'>Antwort</div>
-        <div className='AntwortRight'>Antwort</div>
-        <div className='AntwortLeft'>Antwort</div>
-        <div className='AntwortRight'>Antwort</div>
+        <Button className='AntwortLeft' color="secondary" variant="contained">{answerA}</Button>
+        <Button className='AntwortRight' color="secondary" variant="contained">{answerB}</Button>
+        <Button className='AntwortLeft' color="secondary" variant="contained">{answerC}</Button>
+        <Button className='AntwortRight' color="secondary" variant="contained">{answerD}</Button>
       </div>
     </div>
     
