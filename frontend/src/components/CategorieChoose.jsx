@@ -10,32 +10,38 @@ import image6 from "../imgs/Menschen.jpg";
 import {useNavigate} from 'react-router-dom';
 
 //mit Sebastian questions
-function CategorieChoose({setActiveCategory}) {
+function CategorieChoose({setActiveCategory, setQuestionStep}) {
 
   const navigate = useNavigate();
 
   function QuizGameWeltraum () {
-    setActiveCategory("Weltraum")
+    setActiveCategory("Weltraum");
+    setQuestionStep(0);
     navigate ('/quizgame');
   }
   function QuizGameNature () {
-    setActiveCategory("Natur")
+    setActiveCategory("Natur");
+    setQuestionStep(0);
     navigate ('/quizgame');
   }
   function QuizGameHistory () {
-    setActiveCategory("Geschichte")
+    setActiveCategory("Geschichte");
+    setQuestionStep(0);
     navigate ('/quizgame');
   }
   function QuizGamePhysik () {
-    setActiveCategory("Physik")
+    setActiveCategory("Physik");
+    setQuestionStep(0);
     navigate ('/quizgame'); 
   }
   function QuizGameGeografie () {
-    setActiveCategory("Geografie")
+    setActiveCategory("Geografie");
+    setQuestionStep(0);
     navigate ('/quizgame'); 
   }
   function QuizGameMenschen () {
-    setActiveCategory("Menschen")
+    setActiveCategory("Menschen");
+    setQuestionStep(0);
     navigate ('/quizgame');
   }
 
