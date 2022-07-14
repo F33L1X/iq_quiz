@@ -22,8 +22,8 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
     if (questionStep !== -1) {
       const result = questions.filter(e => e.Kategorie === activeCategory); 
 
-      console.log(activeCategory)
-      console.log(result)
+      //console.log(activeCategory)
+      //console.log("here",result)
       
       return [
         result[questionStep].answerA,
@@ -35,7 +35,12 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
   }
 
   const nextQuestion = (korrekt) => {
-    if (korrekt === true) console.log("Die Antwort war richtig")
+    if (korrekt === true) 
+    console.log("Die Antwort war richtig")
+    setQuestionStep=questionStep+1
+    getQuestion ()
+
+    //questionsteo hochsetzten
   }
 
   
@@ -51,14 +56,15 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
     <div>Frage 1/10; 00:01
       <div className='QuizContainer'>
         <div className='GameFrage'>{question}</div>
-        <Button className='AntwortLeft' color="secondary" variant="contained" onClick={() => nextQuestion(true)}>{answers[0]}</Button>
-        <Button className='AntwortRight' color="secondary" variant="contained" onClick={() => nextQuestion(true)}>{answers[1]}</Button>
-        <Button className='AntwortLeft' color="secondary" variant="contained" onClick={() => nextQuestion(true)}>{answers[2]}</Button>
-        <Button className='AntwortRight' color="secondary" variant="contained" onClick={() => nextQuestion(true)}>{answers[3]}</Button>
+        <Button className='AntwortLeft' color="secondary" variant="contained" onClick={() => nextQuestion(answers[0].rightAnswer)}>{answers[0]?.answer}</Button> 
+        <Button className='AntwortRight' color="secondary" variant="contained" onClick={() => nextQuestion(answers[1].rightAnswer)}>{answers[1]?.answer}</Button>
+        <Button className='AntwortLeft' color="secondary" variant="contained" onClick={() => nextQuestion(answers[2].rightAnswer)}>{answers[2]?.answer}</Button>
+        <Button className='AntwortRight' color="secondary" variant="contained" onClick={() => nextQuestion(answers[3].rightAnswer)}>{answers[3]?.answer}</Button>
       </div>
     </div>
-    
-  )
+    //? ->wenn key vorhanden benutze wie gehabt, wenn nicht vorhanden ignoriere die gesamte Zeile (kein error) 
+    //next step: neuer state "punkte", dann jump zur next question
+    )
 }
 
 export default QuizGame

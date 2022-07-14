@@ -20,20 +20,44 @@ var questions = [
     id: "1",
     Kategorie: "Weltraum",
     question: "Welcher Planet unseres Sonnensystems ist am dichtesten zur Sonne",
-    answerA: "Venus",
-    answerB: "Merkur",  //+
-    answerC: "Jupyter",
-    answerD: "Uranus"
-  },
+    answerA: {
+     answer: "Venus",
+     rightAnswer: false
+    },
+    answerB: {
+      answer: "Merkur",
+      rightAnswer: true
+     },
+    answerC: {
+      answer: "Jupyter",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "Uranus",
+      rightAnswer: false
+     }
+  } ,
   {
     id: "2",
     Kategorie: "Weltraum",
     question: "Wie heißt der größte Planet in unserem Sonnensystem",
-    answerA: "Mars",
-    answerB: "Jupiter",  //+
-    answerC: "Pluto",
-    answerD: "Merkur"
-  },
+    answerA: {
+      answer: "Mars",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Jupiter",
+      rightAnswer: true
+     },  
+    answerC: {
+      answer: "Pluto",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "Merkur",
+      rightAnswer: false
+     },
+  }, /*
   {
     id: "3",
     Kategorie: "Weltraum",
@@ -287,7 +311,7 @@ var questions = [
     answerB: "Frühsteinzeit und Spätsteinzeit",  
     answerC: "Altsteinzeit und Jungsteinzeit", //+
     answerD: "Anfangssteinzeit und fortgeschrittene Steinzeit"
-  }
+  } */
 ]
 
 app.get('/', (req, res) => {
