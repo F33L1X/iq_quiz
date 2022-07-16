@@ -57,171 +57,388 @@ var questions = [
       answer: "Merkur",
       rightAnswer: false
      }
-  }, /*
+  }, 
   {
     id: "3",
     Kategorie: "Weltraum",
     question: "Wie viele Planeten gibt es in unserem Sonnensystem",
-    answerA: "Sechs",
-    answerB: "Sieben",  
-    answerC: "Acht", //+
-    answerD: "Neun"
+    answerA: {
+      answer: "6",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "7",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "8",
+      rightAnswer: true
+     },
+    answerD: {
+      answer: "9",
+      rightAnswer: false
+     }
   },
   {
     id: "4",
     Kategorie: "Weltraum",
     question: "Heute wissen wir, dass die Erde um die Sonne kreist. Doch jahrtausendelang dachten die Menschen, es sei genau umgekehrt und die Sonne und alle anderen Gestirne würden sich um die Erde drehen. Wie heißt der berühmte Wissenschaftler, der diesem Irrtum ein Ende setzte?",
-    answerA: "Albert Einstein",
-    answerB: "Isaac Newton",  
-    answerC: "Nicolaus Kopernikus", //+
-    answerD: "Johannes Kepler"
+    answerA: {
+      answer: "Albert Einstein",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Isaac Newton",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "Nicolaus Kopernikus",
+      rightAnswer: true
+     },
+    answerD: {
+      answer: "Johannes Kepler",
+      rightAnswer: false
+     }
   },
   {
     id: "5",
     Kategorie: "Weltraum",
     question: "Gibt es außer uns andere Intilligenten Wesen? Wie heissen die Wissenschaftler, die sich dieser Frage widmen?",
-    answerA: "Astrologen", 
-    answerB: "Astrobiologen",   //+
-    answerC: "Astronauten", 
-    answerD: "Astronbionisten"
+    answerA: {
+      answer: "Astrologen",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Astrobiologen",
+      rightAnswer: true
+     },  
+    answerC: {
+      answer: "Astronauten",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "Astronbionisten",
+      rightAnswer: false
+     }
+    
   },
   {
     id: "6",
     Kategorie: "Weltraum",
     question: "Der Mond ist der einzige natürlich Himmelskörper, der die Erde umkreist. Wie weit ist er von der Erde entfernt?",
-    answerA: "384.400", //+
-    answerB: "276.300",  
-    answerC: "432.500", 
-    answerD: "166.900"
+    answerA: {
+      answer: "384.400",
+      rightAnswer: true
+     },
+    answerB: {
+      answer: "276.300",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "432.500",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "166.900",
+      rightAnswer: false
+     }
   },
   {
     id: "7",
     Kategorie: "Weltraum",
-    question: "Wie viele Planeten gibt es in unserem Sonnensystem",
-    answerA: "Sechs",
-    answerB: "Sieben",  
-    answerC: "Acht", //+
-    answerD: "Neun"
+    question: "Wie viel Masse weist der Mars auf?",
+    answerA: {
+      answer: "1,9 Erdmassen",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "1,2 Erdmassen",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "0,7 Erdmassen",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "0,1 Erdmassen",
+      rightAnswer: true
+     }
   },
   {
     id: "8",
     Kategorie: "Weltraum",
     question: "Ein Planet ist von der Erde besonders gut zu sehen. Nach Sonne und Mond ist er das hellste Gestirn am Himmel. Wie heißt er?",
-    answerA: "Venus", //+
-    answerB: "Mars",  
-    answerC: "Jupieter", 
-    answerD: "Uranus"
+    answerA: {
+      answer: "Venus",
+      rightAnswer: true
+     },
+    answerB: {
+      answer: "Mars",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "Jupieter",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "Uranus",
+      rightAnswer: false
+     }
   },
   {
     id: "9",
     Kategorie: "Weltraum",
-    question: "Wie groß ist der Kosmos?",
-    answerA: "10^22km",
-    answerB: "10^23km",  
-    answerC: "10^19km", 
-    answerD: "10^24km" //+
+    question: "Wie groß ist der Durchmesser des Kosmos?",
+    answerA: {
+      answer: "18 Lichtjahre",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "38 Lichtjahre",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "78 Lichtjahre",
+      rightAnswer: true
+     },
+    answerD: {
+      answer: "108 Lichtjahre",
+      rightAnswer: false
+     }
   },
   {
     id: "10",
     Kategorie: "Weltraum",
     question: "Welche Galaxie ist unserer am nächsten?",
-    answerA: "Beta Centaurus",
-    answerB: "Alpha Centaurus ",  
-    answerC: "Beta Zentauri", //+
-    answerD: "Alpha Centauri"
+    answerA: {
+      answer: "Beta Centaurus",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Alpha Centaurus",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "Beta Zentauri",
+      rightAnswer: true
+     },
+    answerD: {
+      answer: "Alpha Centauri",
+      rightAnswer: false
+     }
   },
 //NATUR
-  {
+   {
     id: "11",
     Kategorie: "Natur",
     question: "Wie schwer kann ein Blauwal werden?",
-    answerA: "Bis zu 1.000 Kilogramm",
-    answerB: "Bis zu 20.000 Kilogramm",  
-    answerC: "Bis zu 95 Tonnen",
-    answerD: "Bis zu 200.000.000 Gramm" //+
+    answerA: {
+      answer: "Bis zu 1.000 Kilogramm",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Bis zu 20.000 Kilogramm",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "Bis zu 95 Tonnen",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "Bis zu 200.000.000 Gramm",
+      rightAnswer: true
+     }
   },
   {
     id: "12",
     Kategorie: "Natur",
     question: "Zu welcher Familie gehört der Fuchs?",
-    answerA: "Zur Familie der Bären",
-    answerB: "Zur Familie der Katzen", 
-    answerC: "Zur Familie der Mäuse",
-    answerD: "Zur Familie der Hunde" //+ 
+    answerA: {
+      answer: "Zur Familie der Bären",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Zur Familie der Katzen",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "Zur Familie der Mäuse",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "Zur Familie der Hunde",
+      rightAnswer: true
+     }
   },
   {
     id: "13",
     Kategorie: "Natur",
     question: "Welche Delfinart ist die bekannteste?",
-    answerA: "Große Meister",
-    answerB: "Kleine Schwimmer",  
-    answerC: "Große Tümmler", //+
-    answerD: "Kleine Säuger"
+    answerA: {
+      answer: "Große Meister",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Kleine Schwimmer",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "Große Tümmler",
+      rightAnswer: true
+     },
+    answerD: {
+      answer: "Kleine Säuger",
+      rightAnswer: false
+     }
   },
   {
     id: "14",
     Kategorie: "Natur",
     question: "Wie viele Halswirbel hat eine Giraffe?",
-    answerA: "7", //+
-    answerB: "12",  
-    answerC: "19", 
-    answerD: "15"
+    answerA: {
+      answer: "7",
+      rightAnswer: true
+     },
+    answerB: {
+      answer: "12",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "19",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "15",
+      rightAnswer: false
+     }
   },
   {
     id: "15",
     Kategorie: "Natur",
     question: "Wieso spucken Lamas?",
-    answerA: "Um ihre Zuneigung auszudrücken.", 
-    answerB: "Um zu signalisieren, dass sie Hunger haben.",   
-    answerC: "Um ihre Dominanz zu zeigen.",  //+
-    answerD: "Sie spucken ohne Grund."
+    answerA: {
+      answer: "Um ihre Zuneigung auszudrücken.",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Um zu signalisieren, dass sie Hunger haben.",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "Um ihre Dominanz zu zeigen.",
+      rightAnswer: true
+     },
+    answerD: {
+      answer: "Sie spucken ohne Grund.",
+      rightAnswer: false
+     }
   },
   {
     id: "16",
     Kategorie: "Natur",
     question: "Zum Gedeihen benötigen die meisten Pflanzen...",
-    answerA: "Natrium.", 
-    answerB: "Iod.",  
-    answerC: "Stickstoff.", //+
-    answerD: "Radium."
+    answerA: {
+      answer: "Natrium",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Iod",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "Stickstoff",
+      rightAnswer: true
+     },
+    answerD: {
+      answer: "Radium",
+      rightAnswer: false
+     }
   },
   {
     id: "17",
     Kategorie: "Natur",
     question: "Welche dieser Früchte ist für den Botaniker keine Beere?",
-    answerA: "Stachelbeere",
-    answerB: "Erdbeere",  //+
-    answerC: "Johannisbeere", 
-    answerD: "Heidelbeere"
+    answerA: {
+      answer: "Stachelbeere",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Erdbeere",
+      rightAnswer: true
+     },  
+    answerC: {
+      answer: "Johannisbeere",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "Heidelbeere",
+      rightAnswer: false
+     }
   },
   {
     id: "18",
     Kategorie: "Natur",
     question: "Wie viele Pflanzen in der gemäßigten Klimazone sind auf Bienen als Bestäuber angewiesen?",
-    answerA: "64%", //+
-    answerB: "54%",  
-    answerC: "44%", 
-    answerD: "34%"
+    answerA: {
+      answer: "64%",
+      rightAnswer: true
+     },
+    answerB: {
+      answer: "54%",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "44%",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "34%",
+      rightAnswer: false
+     }
   },
   {
     id: "19",
     Kategorie: "Natur",
     question: "Bei was handelt es sich um eine Pflanze??",
-    answerA: "Koralle",
-    answerB: "Seetang",  //+
-    answerC: "Seeigel", 
-    answerD: "Seeanemone" 
+    answerA: {
+      answer: "Koralle",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Seetang",
+      rightAnswer: true
+     },  
+    answerC: {
+      answer: "Seeigel",
+      rightAnswer: true
+     },
+    answerD: {
+      answer: "Seeanemone",
+      rightAnswer: false
+     }
   },
   {
     id: "20",
     Kategorie: "Natur",
     question: "Wie heißen Pflanzen, die Wasser speichern??",
-    answerA: "Helophyten",
-    answerB: "Sukkulenten ",  //+
-    answerC: "Hydrophyten", 
-    answerD: "Pleustophyten"
+    answerA: {
+      answer: "Helophyten",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Sukkulenten",
+      rightAnswer: true
+     },  
+    answerC: {
+      answer: "Hydrophyten",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "Pleustophyten",
+      rightAnswer: false
+     }
   },
-  //Geschichte
+  /* //Geschichte
   {
     id: "21",
     Kategorie: "Geschichte",
@@ -311,8 +528,8 @@ var questions = [
     answerB: "Frühsteinzeit und Spätsteinzeit",  
     answerC: "Altsteinzeit und Jungsteinzeit", //+
     answerD: "Anfangssteinzeit und fortgeschrittene Steinzeit"
-  } */
-]
+  } */ 
+] 
 
 app.get('/', (req, res) => {
   res.send('Hello World')

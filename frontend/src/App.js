@@ -41,6 +41,9 @@ function App() {
   const [activeCategory, setActiveCategory] = useState("");
   const [questionStep, setQuestionStep] = useState(-1);
   const [answers, setAnswers] = useState([]);
+  const [answersRight, setAnswersRight] = useState(0);
+  const [categorieCheck, setCategorieCheck] = useState({Weltraum:false, Natur:false, Geschichte:false, Physik:false, Geografie:false, Menschen:false});
+    
 
   useEffect(() => {
     loadCategories().then(res => {
@@ -62,7 +65,7 @@ function App() {
             <Routes>
               <Route path ="/" element={<WelcomeFeed />} /> 
               <Route path ="/categories" element={<CategorieChoose categories={categories} questions={questions} setActiveCategory={setActiveCategory} setQuestionStep={setQuestionStep} />} />
-              <Route path ="/quizgame" element={<QuizGame questions={questions} activeCategory={activeCategory} questionStep={questionStep} setQuestionStep={setQuestionStep} answers={answers} setAnswers={setAnswers}/>} />
+              <Route path ="/quizgame" element={<QuizGame questions={questions} activeCategory={activeCategory} questionStep={questionStep} setQuestionStep={setQuestionStep} answers={answers} setAnswers={setAnswers} answersRight={answersRight} setAnswersRight={setAnswersRight} categorieCheck={categorieCheck} setCategorieCheck={setCategorieCheck}/>} />
             </Routes>
           </Grid>
           <Grid item xs={12}>

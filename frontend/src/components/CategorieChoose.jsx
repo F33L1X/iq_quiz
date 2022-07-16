@@ -10,14 +10,16 @@ import image6 from "../imgs/Menschen.jpg";
 import {useNavigate} from 'react-router-dom';
 
 //mit Sebastian questions
-function CategorieChoose({setActiveCategory, setQuestionStep}) {
+function CategorieChoose({setActiveCategory, setQuestionStep, categorieCheck}) {
 
   const navigate = useNavigate();
 
   function QuizGameWeltraum () {
+    if (categorieCheck.Weltraum = false) {
     setActiveCategory("Weltraum");
     setQuestionStep(0);
     navigate ('/quizgame');
+  }
   }
   function QuizGameNature () {
     setActiveCategory("Natur");
