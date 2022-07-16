@@ -37,9 +37,7 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
   const nextQuestion = (korrekt) => {
     if (korrekt === true) 
     console.log("Die Antwort war richtig")
-    setQuestionStep=questionStep+1
-    getQuestion ()
-
+    setQuestionStep(questionStep+1);
     //questionsteo hochsetzten
   }
 
@@ -47,10 +45,16 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
 
   useEffect(() => {
     console.log(questionStep)
-    setQuestionStep(questionStep+1);
+    setQuestionStep(questionStep);
       setQuestion(getQuestion());
       setAnswers(getAnswers());
   }, []);
+
+  useEffect (() =>{
+    setQuestion(getQuestion());
+    setAnswers(getAnswers());
+
+  }, [questionStep])
 
   return (
     <div>Frage 1/10; 00:01

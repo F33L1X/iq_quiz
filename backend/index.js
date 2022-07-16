@@ -36,7 +36,7 @@ var questions = [
       answer: "Uranus",
       rightAnswer: false
      }
-  } ,
+  },
   {
     id: "2",
     Kategorie: "Weltraum",
@@ -56,7 +56,7 @@ var questions = [
     answerD: {
       answer: "Merkur",
       rightAnswer: false
-     },
+     }
   }, /*
   {
     id: "3",
