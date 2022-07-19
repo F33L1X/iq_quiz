@@ -9,6 +9,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CategorieChoose from './components/CategorieChoose';
 import Navbar from './components/NavBar'
 import QuizGame from './components/QuizGame'
+import SignUp from './components/SignUp'
+
+
 //import DenseTable from './components/Scoreboard'   //->Soll angezeigt werden wenn Game gepielt wurde
 
 async function loadQuestions() {
@@ -43,6 +46,7 @@ function App() {
   const [answers, setAnswers] = useState([]);
   const [answersRight, setAnswersRight] = useState(0);
   const [categorieCheck, setCategorieCheck] = useState({Weltraum:false, Natur:false, Geschichte:false, Physik:false, Geografie:false, Menschen:false});
+  const [questionCounter, setQuestionCounter] = useState(0);
     
 
   useEffect(() => {
@@ -65,7 +69,8 @@ function App() {
             <Routes>
               <Route path ="/" element={<WelcomeFeed />} /> 
               <Route path ="/categories" element={<CategorieChoose categories={categories} questions={questions} setActiveCategory={setActiveCategory} setQuestionStep={setQuestionStep} categorieCheck={categorieCheck} />} />
-              <Route path ="/quizgame" element={<QuizGame questions={questions} activeCategory={activeCategory} questionStep={questionStep} setQuestionStep={setQuestionStep} answers={answers} setAnswers={setAnswers} answersRight={answersRight} setAnswersRight={setAnswersRight} categorieCheck={categorieCheck} setCategorieCheck={setCategorieCheck}/>} />
+              <Route path ="/quizgame" element={<QuizGame questions={questions} activeCategory={activeCategory} questionStep={questionStep} setQuestionStep={setQuestionStep} answers={answers} setAnswers={setAnswers} answersRight={answersRight} setAnswersRight={setAnswersRight} categorieCheck={categorieCheck} setCategorieCheck={setCategorieCheck} questionCounter={questionCounter} setQuestionCounter={setQuestionCounter}/>} />
+              <Route path ="/SignUp" element={<SignUp />} /> 
             </Routes>
           </Grid>
           <Grid item xs={12}>

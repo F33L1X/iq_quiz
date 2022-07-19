@@ -8,6 +8,7 @@ import image4 from "../imgs/Physik.jpg";
 import image5 from "../imgs/Geografie.jpg";
 import image6 from "../imgs/Menschen.jpg";
 import {useNavigate} from 'react-router-dom';
+import { accordionActionsClasses } from '@mui/material';
 
 //mit Sebastian questions
 function CategorieChoose({setActiveCategory, setQuestionStep, categorieCheck}) {
@@ -29,9 +30,11 @@ function CategorieChoose({setActiveCategory, setQuestionStep, categorieCheck}) {
   }
   }
   function QuizGameHistory () {
+    if (categorieCheck.Natur===false){
     setActiveCategory("Geschichte");
     setQuestionStep(0);
     navigate ('/quizgame');
+  }
   }
   function QuizGamePhysik () {
     setActiveCategory("Physik");

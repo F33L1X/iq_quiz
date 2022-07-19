@@ -438,97 +438,458 @@ var questions = [
       rightAnswer: false
      }
   },
-  /* //Geschichte
+  //Geschichte
   {
     id: "21",
     Kategorie: "Geschichte",
     question: "Im Zuge welcher Revolution wurde Ludwig XVI. zum Tode verurteilt und hingerichtet?",
-    answerA: "Amerikanische Revolution",
-    answerB: "Japanische Revolution",  
-    answerC: "Deutsche Revolution",
-    answerD: "Französische Revolution" //+
+    answerA: {
+      answer: "Amerikanische Revolution",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Japanische Revolution",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "Deutsche Revolution",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "Französische Revolution",
+      rightAnswer: true
+     }
   },
   {
     id: "22",
     Kategorie: "Geschichte",
     question: "Wer war der erste Bundeskanzler der Bundesrepublik Deutschland?",
-    answerA: "Ludwig Erhard",
-    answerB: "Konrad Adenauer",  //+ 
-    answerC: "Helmut Schmidt",
-    answerD: " Willy Brandt" 
+    answerA: {
+      answer: "Ludwig Erhard",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Konrad Adenauer",
+      rightAnswer: true
+     },  
+    answerC: {
+      answer: "Helmut Schmidt",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "Willy Brandt",
+      rightAnswer: false
+     }
+
+    
   },
   {
     id: "23",
     Kategorie: "Geschichte",
     question: "In welchem Jahr wurde die NATO gegründet??",
-    answerA: "1950",
-    answerB: "1924",  
-    answerC: "1949", //+
-    answerD: "1974"
+    answerA: {
+      answer: "1950",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "1924",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "1949",
+      rightAnswer: true
+     },
+    answerD: {
+      answer: "1974",
+      rightAnswer: false
+     }
   },
   {
     id: "24",
     Kategorie: "Geschichte",
     question: "Wer gilt als Erfinder des modernen Buchdrucks mit beweglichen Metalllettern und der Druckerpresse??",
-    answerA: "Johannes Gutenberg", //+
-    answerB: "Ludwig Erhard",  
-    answerC: "Gregor Mendel", 
-    answerD: "Papst Franziskus"
+    answerA: {
+      answer: "Johannes Gutenberg",
+      rightAnswer: true
+     },
+    answerB: {
+      answer: "Ludwig Erhard",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "Gregor Mendel",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "Papst Franziskus",
+      rightAnswer: false
+     }
   },
   {
     id: "25",
     Kategorie: "Geschichte",
     question: "Wer führte 1914 ein Attentat auf Erzherzog Franz Ferdinand durch??",
-    answerA: "Kaiser Wilhelm II", 
-    answerB: "Gavrilo Princip.",   //+
-    answerC: "Alfred Graf von Schlieffen",  
-    answerD: "Theobald von Bethmann Hollweg"
+    answerA: {
+      answer: "Kaiser Wilhelm II",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Gavrilo Princip",
+      rightAnswer: true
+     },  
+    answerC: {
+      answer: "Alfred Graf von Schlieffen",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "Theobald von Bethmann Hollweg",
+      rightAnswer: false
+     }
   },
   {
     id: "26",
     Kategorie: "Geschichte",
     question: "Wo wurde zum ersten mal Gebrauch von Schießpulver gemacht?",
-    answerA: "", 
-    answerB: "Iod.",  
-    answerC: "Stickstoff.", //+
-    answerD: "Radium."
+    answerA: {
+      answer: "Japan",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "China",
+      rightAnswer: true
+     },  
+    answerC: {
+      answer: "Großbritanien",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "Byzantinisches Reich",
+      rightAnswer: false
+     }
   },
   {
     id: "27",
     Kategorie: "Geschichte",
     question: "Womit versuchte Marokko 1975, Spanien zur Übergabe der Kolonie Spanisch-Sahara zu bewegen?",
-    answerA: "Roter Weg",
-    answerB: "Blaue Bewegung",  
-    answerC: "Gelbe Runde", 
-    answerD: "Grüner Marsch" //+
+    answerA: {
+      answer: "Roter Weg",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Blaue Bewegung",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "Gelbe Rund",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "Grüner Marsch",
+      rightAnswer: true
+     }
   },
   {
     id: "28",
     Kategorie: "Geschichte",
     question: "In welchem Jahr wurde der zuvor gegoltene Goldstandard für Fiat Currencys aufgehoben",
-    answerA: "1967", 
-    answerB: "1971", //+ 
-    answerC: "1973", 
-    answerD: "1978"
+    answerA: {
+      answer: "1967",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "1971",
+      rightAnswer: true
+     },  
+    answerC: {
+      answer: "1973",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "1978",
+      rightAnswer: false
+     }
   },
   {
     id: "29",
     Kategorie: "Geschichte",
     question: "Wann wurde Rom nach altrömischer Überlieferung gegründet?",
-    answerA: "553 v Ch.",
-    answerB: "653 v Ch.",  
-    answerC: "753 v Ch.", //+
-    answerD: "853 v Ch." 
+    answerA: {
+      answer: "553 v Ch",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "653 v Ch",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "753 v Ch",
+      rightAnswer: true
+     },
+    answerD: {
+      answer: "853 v Ch",
+      rightAnswer: false
+     }
   },
   {
     id: "30",
     Kategorie: "Geschichte",
     question: "Man unterteilt die Steinzeit in...",
-    answerA: "Altsteinzeit und Neusteinzeit",
-    answerB: "Frühsteinzeit und Spätsteinzeit",  
-    answerC: "Altsteinzeit und Jungsteinzeit", //+
-    answerD: "Anfangssteinzeit und fortgeschrittene Steinzeit"
-  } */ 
+    answerA: {
+      answer: "Altsteinzeit und Neusteinzeit",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Frühsteinzeit und Spätsteinzeit",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "Altsteinzeit und Jungsteinzeit",
+      rightAnswer: true
+     },
+    answerD: {
+      answer: "Anfangssteinzeit und fortgeschrittene Steinzeit",
+      rightAnswer: false
+    }
+  },
+  {
+     
+     //Physik
+     
+    id: "31",
+    Kategorie: "Physik",
+    question: "Es existieren 4 universell wirkende Wechelwirkungen. Welche gehört nicht dazu",
+    answerA: {
+      answer: "Gravitation",
+      rightAnswer: false
+     },
+    answerB: {
+      answer: "Schwachte Wechelwirkung",
+      rightAnswer: false
+     },  
+    answerC: {
+      answer: "Starke Wechselwirkung",
+      rightAnswer: false
+     },
+    answerD: {
+      answer: "Intermolekulare Wechselwirkung",
+      rightAnswer: true
+    }
+  },
+  {
+    
+   id: "32",
+   Kategorie: "Physik",
+   question: "Bei wieviel Grad verdampft Wasser?",
+   answerA: {
+     answer: "373,15K",
+     rightAnswer: true
+    },
+   answerB: {
+     answer: "122F",
+     rightAnswer: false
+    },  
+   answerC: {
+     answer: "100K",
+     rightAnswer: false
+    },
+   answerD: {
+     answer: "273,15K",
+     rightAnswer: false
+   }
+ },
+ {
+     
+  //Physik
+  
+ id: "33",
+ Kategorie: "Physik",
+ question: "Was ist dafür verantwortlich, dass wir Gegenstände im Wasser größer wahrnehmen, als sie tatsächlich sind?",
+ answerA: {
+   answer: "die Wassertiefe",
+   rightAnswer: false
+  },
+ answerB: {
+   answer: "die Geschwindigkeit der Lichtstrahlen",
+   rightAnswer: true
+  },  
+ answerC: {
+   answer: "die Wellen des Wassers",
+   rightAnswer: false
+  },
+ answerD: {
+   answer: "Die Wasserfarbe",
+   rightAnswer: false
+ }
+},
+{
+     
+  //Physik
+  
+ id: "34",
+ Kategorie: "Physik",
+ question: "Welcher deutsche Dichter widmete sich auch der Physik?",
+ answerA: {
+   answer: "Johann Wolfgang von Goethe",
+   rightAnswer: true
+  },
+ answerB: {
+   answer: "Friedrich Schiller",
+   rightAnswer: false
+  },  
+ answerC: {
+   answer: "E.T.A. Hoffmann",
+   rightAnswer: false
+  },
+ answerD: {
+   answer: "Beethoven",
+   rightAnswer: false
+ }
+},
+{
+     
+  //Physik
+  
+ id: "35",
+ Kategorie: "Physik",
+ question: "",
+ answerA: {
+   answer: "",
+   rightAnswer: false
+  },
+ answerB: {
+   answer: "",
+   rightAnswer: false
+  },  
+ answerC: {
+   answer: "",
+   rightAnswer: false
+  },
+ answerD: {
+   answer: "",
+   rightAnswer: false
+ }
+},
+{
+     
+  //Physik
+  
+ id: "36",
+ Kategorie: "Physik",
+ question: "",
+ answerA: {
+   answer: "",
+   rightAnswer: false
+  },
+ answerB: {
+   answer: "",
+   rightAnswer: false
+  },  
+ answerC: {
+   answer: "",
+   rightAnswer: false
+  },
+ answerD: {
+   answer: "",
+   rightAnswer: false
+ }
+},
+{
+     
+  //Physik
+  
+ id: "37",
+ Kategorie: "Physik",
+ question: "",
+ answerA: {
+   answer: "",
+   rightAnswer: false
+  },
+ answerB: {
+   answer: "",
+   rightAnswer: false
+  },  
+ answerC: {
+   answer: "",
+   rightAnswer: false
+  },
+ answerD: {
+   answer: "",
+   rightAnswer: false
+ }
+},
+{
+     
+  //Physik
+  
+ id: "38",
+ Kategorie: "Physik",
+ question: "",
+ answerA: {
+   answer: "",
+   rightAnswer: false
+  },
+ answerB: {
+   answer: "",
+   rightAnswer: false
+  },  
+ answerC: {
+   answer: "",
+   rightAnswer: false
+  },
+ answerD: {
+   answer: "",
+   rightAnswer: false
+ }
+},
+{
+     
+  //Physik
+  
+ id: "39",
+ Kategorie: "Physik",
+ question: "",
+ answerA: {
+   answer: "",
+   rightAnswer: false
+  },
+ answerB: {
+   answer: "",
+   rightAnswer: false
+  },  
+ answerC: {
+   answer: "",
+   rightAnswer: false
+  },
+ answerD: {
+   answer: "",
+   rightAnswer: false
+ }
+},
+{
+     
+  //Physik
+  
+ id: "40",
+ Kategorie: "Physik",
+ question: "",
+ answerA: {
+   answer: "",
+   rightAnswer: false
+  },
+ answerB: {
+   answer: "",
+   rightAnswer: false
+  },  
+ answerC: {
+   answer: "",
+   rightAnswer: false
+  },
+ answerD: {
+   answer: "",
+   rightAnswer: false
+ }
+}
+   
 ] 
 
 app.get('/', (req, res) => {

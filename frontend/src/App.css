@@ -1,9 +1,49 @@
 body {
   margin: 0;
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   background: linear-gradient(90deg, rgba(162,153,147,1) 9%, rgba(217,212,190,1) 48%, rgba(162,153,147,1) 92%);
 }
 
+/*---------------------------------------*/
+/*Navbar*/
+.siteTitle {
+background-size: 40px 30px;
+width: 50px;
+}
+.nav {
+  background-color: #1e4075;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 1rem;
+  align-items: stretch;
+}
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 1rem;
+  display: flex;
+  font-size: 14px;
+}
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+}
+.nav li:active {
+  background-color: grey;
+}
+.nav li:hover {
+  background-color: grey;
+}
+ /*end Navbar*/ 
+/*---------------------------------------*/
+/*main*/
 .ScoreContainer {
   background-color: lightskyblue;
   border-radius: 20px;
@@ -11,7 +51,6 @@ body {
   height: 180px;
   width: fit-content;
 }
-
 .ScoreTitle {
   list-style: none;
   padding: 16px;
@@ -23,7 +62,6 @@ body {
   list-style-type: square;
   font-family: monospace;
 }
-
 .StartArea { 
   text-align: center;
 }
@@ -34,12 +72,9 @@ body {
   font-family: monospace;
   font-weight: bold;
 }
-
-
-
-
-
-
+/*end main*/
+/*---------------------------------------*/
+/*Category choose*/
 .CategorieChoose {
   display:flex;
   flex-direction: row;
@@ -51,7 +86,6 @@ body {
 .CategorieChoose > div {
   margin: 2%;
 }
-
 .box{
   background-color: beige;
   width: 100px;
@@ -70,33 +104,43 @@ body {
   text-shadow: 1px 1px black;
   text-align: center;
 }
+/*end Category choose*/
+/*---------------------------------------*/
+/*Quizgame*/
 
-
-
-
-
-
-.QuizContainer {
-  display: grid;
-  grid-template-columns: 120px 5vw 120px;
+.QuoteContainer {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
   background-color: #2196F3;
   padding: 10px;
   border-radius: 20px;
-  box-shadow: 2px 4px 8px 1px;
-  
+  box-shadow: 2px 4px 8px 1px; 
+  margin-bottom: 20px;
+}
+.Quote {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.QuizContainer {
+  display: grid;
+  grid-template-columns: 1fr 5vw 1fr;
+  max-width: 500px;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 2px 4px 8px 1px; 
 }
 .GameFrage {
-  background-color: #9c5a54;
+  color: white;
   grid-column-start: 1;
   grid-column-end: 4;
-  border: 2px solid;
-  border-radius: 5px;
   
 }
 .AntwortLeft {
-  background-color: black;
-  background-color: rgba(255, 255, 255, 0.8);
   border: 2px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   font-size: 18px;
@@ -106,8 +150,6 @@ body {
   border-radius: 5px;
 }
 .AntwortRight {
-  background-color: black;
-  background-color: rgba(255, 255, 255, 0.8);
   border: 2px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   font-size: 18px;
@@ -116,17 +158,27 @@ body {
   grid-column-end: 4;
   border-radius: 5px;
 }
-
-
-
-
-
-
-
-
-
+/*end Quizgame*/
+/*---------------------------------------*/
+/*footer*/ 
 .Footer {
-  background-color: grey; 
-  
+   width:100%;
+   height:40px;   /* Height of the footer */
+   background:#1e4075;
+   opacity: 0.98; 
+}
+.Footer ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-content: center;
+  font-size: 14px;
   
 }
+
+.FooterText {
+  text-decoration: none;
+  color: white;
+}
+/*end footer*/ 
+/*---------------------------------------*/

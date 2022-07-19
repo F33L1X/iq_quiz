@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import { useState, useEffect } from "react";
 import {useNavigate} from 'react-router-dom';
 
-function QuizGame({questions, activeCategory, questionStep, setQuestionStep, answers, setAnswers, answersRight, setAnswersRight, setCategorieCheck}) {
+function QuizGame({questions, activeCategory, questionStep, setQuestionStep, answers, setAnswers, answersRight, setAnswersRight, setCategorieCheck, questionCounter, setQuestionCounter}) {
 
   const [question, setQuestion] = useState("");
   const navigate = useNavigate();
@@ -24,7 +24,6 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
     if (questionStep !== -1 && questionStep < 10) {
       const result = questions.filter(e => e.Kategorie === activeCategory); 
 
-      //console.log(activeCategory)
       //console.log("here",result)
       
       return [
@@ -40,21 +39,26 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
     if (questionStep < 10) {
       if (korrekt === true) {
       //console.log("Die Antwort war richtig")
-      setQuestionStep(questionStep+1);
+      setQuestionStep (questionStep+1);
       setAnswersRight (answersRight+1)
+      setQuestionCounter (questionCounter+1)
       } else {
       //console.log("Die Antwort war falsch")
       setQuestionStep(questionStep+1);
+      setQuestionCounter (questionCounter+1)
       }
     }
 
     if (questionStep == 9) {
     setQuestionStep(-1)
-    if (questions.Kategorie = "Weltraum") {
-    setCategorieCheck({Weltraum:true})
-    console.log("hier weltall")
-    } else if (questions.Kategorie = "Natur") {
-    setCategorieCheck({Natur:true})
+    setQuestionCounter(0)
+    if (activeCategory === "Weltraum") {
+      //console.log(activeCategory)
+    setCategorieCheck({Weltraum:false, Natur:false, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
+    
+    } else if (activeCategory === "Natur") {
+      //console.log(activeCategory)
+    setCategorieCheck({Weltraum:false, Natur:false, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
     console.log("hier Natur")
     }
 
@@ -62,10 +66,6 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
     
     } 
   }
-
-
-
-  
 
   useEffect(() => {
     console.log(questionStep)
@@ -80,14 +80,19 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
   }, [questionStep])
 
   return (
-    <div>Frage 1/10; 00:01
-      <div className='QuizContainer'>
-        <div className='GameFrage'>{question}</div>
-        {answers ? <Button className='AntwortLeft' color="secondary" variant="contained" onClick={() => nextQuestion(answers[0]?.rightAnswer)}>{answers[0]?.answer}</Button> : null} 
-        {answers ?<Button className='AntwortRight' color="secondary" variant="contained" onClick={() => nextQuestion(answers[1]?.rightAnswer)}>{answers[1]?.answer}</Button> : null}
-        {answers ?<Button className='AntwortLeft' color="secondary" variant="contained" onClick={() => nextQuestion(answers[2]?.rightAnswer)}>{answers[2]?.answer}</Button> : null}
-        {answers ?<Button className='AntwortRight' color="secondary" variant="contained" onClick={() => nextQuestion(answers[3]?.rightAnswer)}>{answers[3]?.answer}</Button> : null}
+    <div>
+      <div className="QuoteContainer">
+      <div className="Quote">Frage {questionCounter}/10; 00:01</div>
+      
       </div>
+
+        <div className='QuizContainer'>
+        <div className='GameFrage'>{question}</div>
+          {answers ? <Button style={{backgroundColor: "#aab369",padding: "10px 1px",fontSize: "14px",textTransform: 'none'}} className='AntwortLeft' color="secondary" variant="contained" onClick={() => nextQuestion(answers[0]?.rightAnswer)}>{answers[0]?.answer}</Button> : null} 
+          {answers ?<Button style={{backgroundColor: "#aab369",padding: "10px 1px",fontSize: "14px",textTransform: 'none'}} className='AntwortRight' color="secondary" variant="contained" onClick={() => nextQuestion(answers[1]?.rightAnswer)}>{answers[1]?.answer}</Button> : null}
+          {answers ?<Button style={{backgroundColor: "#aab369",padding: "10px 1px",fontSize: "14px",textTransform: 'none'}} className='AntwortLeft' color="secondary" variant="contained" onClick={() => nextQuestion(answers[2]?.rightAnswer)}>{answers[2]?.answer}</Button> : null}
+          {answers ?<Button style={{backgroundColor: "#aab369",padding: "10px 1px",fontSize: "14px",textTransform: 'none'}} className='AntwortRight' color="secondary" variant="contained" onClick={() => nextQuestion(answers[3]?.rightAnswer)}>{answers[3]?.answer}</Button> : null}
+        </div>
     </div>
     //? ->wenn key vorhanden benutze wie gehabt, wenn nicht vorhanden ignoriere die gesamte Zeile (kein error) 
     //next step: neuer state "punkte", dann jump zur next question
