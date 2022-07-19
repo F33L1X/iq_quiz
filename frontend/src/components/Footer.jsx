@@ -7,7 +7,7 @@ export default function Footer () {
         <a className="FooterText" href=""> | FlexoArts |</a>
       </li>
       <li>
-        <a className="FooterText" href="">Feat.</a>
+        <a className="FooterText" href="">Collab.</a>
       </li>
       <li>
         <a className="FooterText" href="">| CodingSchool |</a>

@@ -30,27 +30,34 @@ function CategorieChoose({setActiveCategory, setQuestionStep, categorieCheck}) {
   }
   }
   function QuizGameHistory () {
-    if (categorieCheck.Natur===false){
+    if (categorieCheck.Geschichte===false){
     setActiveCategory("Geschichte");
     setQuestionStep(0);
     navigate ('/quizgame');
   }
   }
   function QuizGamePhysik () {
+    if (categorieCheck.Physik===false){
     setActiveCategory("Physik");
     setQuestionStep(0);
     navigate ('/quizgame'); 
   }
+  }
   function QuizGameGeografie () {
+    if (categorieCheck.Geografie===false){
     setActiveCategory("Geografie");
     setQuestionStep(0);
     navigate ('/quizgame'); 
   }
+  }
   function QuizGameMenschen () {
+    if (categorieCheck.Menschen===false){
     setActiveCategory("Menschen");
     setQuestionStep(0);
     navigate ('/quizgame');
   }
+  }
+  
 
 
 

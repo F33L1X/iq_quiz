@@ -2,8 +2,9 @@ import React from 'react'
 import Button from '@mui/material/Button';
 import { useState, useEffect } from "react";
 import {useNavigate} from 'react-router-dom';
+import CategorieChoose from './CategorieChoose';
 
-function QuizGame({questions, activeCategory, questionStep, setQuestionStep, answers, setAnswers, answersRight, setAnswersRight, setCategorieCheck, questionCounter, setQuestionCounter}) {
+function QuizGame({questions, activeCategory, questionStep, setQuestionStep, answers, setAnswers, answersRight, setAnswersRight, categorieCheck, setCategorieCheck, questionCounter, setQuestionCounter}) {
 
   const [question, setQuestion] = useState("");
   const navigate = useNavigate();
@@ -42,6 +43,7 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
       setQuestionStep (questionStep+1);
       setAnswersRight (answersRight+1)
       setQuestionCounter (questionCounter+1)
+
       } else {
       //console.log("Die Antwort war falsch")
       setQuestionStep(questionStep+1);
@@ -54,17 +56,40 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
     setQuestionCounter(0)
     if (activeCategory === "Weltraum") {
       //console.log(activeCategory)
-    setCategorieCheck({Weltraum:false, Natur:false, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
-    
+    //setCategorieCheck({Weltraum:true, Natur:false, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
+    setCategorieCheck({...categorieCheck, Weltraum: true}) 
+
     } else if (activeCategory === "Natur") {
       //console.log(activeCategory)
-    setCategorieCheck({Weltraum:false, Natur:false, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
-    console.log("hier Natur")
-    }
-
-    navigate ('/categories');
+    //setCategorieCheck({Weltraum:false, Natur:true, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
+    setCategorieCheck({...categorieCheck, Natur: true}) //destructuring googlen/slack -> "{}"","der Rest", "das andere" -> neues Objeckt
     
-    } 
+    } else if (activeCategory === "Geschichte") {
+      //console.log(activeCategory)
+    //setCategorieCheck({Weltraum:false, Natur:true, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
+    setCategorieCheck({...categorieCheck, Geschichte: true}) //destructuring googlen/slack -> "{}"","der Rest", "das andere" -> neues Objeckt
+    
+    }
+    else if (activeCategory === "Physik") {
+      //console.log(activeCategory)
+    //setCategorieCheck({Weltraum:false, Natur:true, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
+    setCategorieCheck({...categorieCheck, Physik: true}) //destructuring googlen/slack -> "{}"","der Rest", "das andere" -> neues Objeckt
+   
+    }
+    else if (activeCategory === "Geografie") {
+      //console.log(activeCategory)
+    //setCategorieCheck({Weltraum:false, Natur:true, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
+    setCategorieCheck({...categorieCheck, Geografie: true}) //destructuring googlen/slack -> "{}"","der Rest", "das andere" -> neues Objeckt
+  
+    }
+    else if (activeCategory === "Menschen") {
+      //console.log(activeCategory)
+    //setCategorieCheck({Weltraum:false, Natur:true, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
+    setCategorieCheck({...categorieCheck, Menschen: true}) //destructuring googlen/slack -> "{}"","der Rest", "das andere" -> neues Objeckt
+    
+    }
+    navigate ('/categories');
+  } 
   }
 
   useEffect(() => {
