@@ -107,7 +107,6 @@ width: 50px;
 /*end Category choose*/
 /*---------------------------------------*/
 /*Quizgame*/
-
 .QuoteContainer {
   display: flex;
   flex-direction: column;
@@ -123,7 +122,6 @@ width: 50px;
   display: flex;
   justify-content: center;
 }
-
 .QuizContainer {
   display: grid;
   grid-template-columns: 1fr 5vw 1fr;
@@ -138,7 +136,6 @@ width: 50px;
   color: white;
   grid-column-start: 1;
   grid-column-end: 4;
-  
 }
 .AntwortLeft {
   border: 2px solid rgba(0, 0, 0, 0.8);
