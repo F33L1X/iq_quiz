@@ -55,36 +55,20 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
     setQuestionStep(-1)
     setQuestionCounter(0)
     if (activeCategory === "Weltraum") {
-      //console.log(activeCategory)
-    //setCategorieCheck({Weltraum:true, Natur:false, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
     setCategorieCheck({...categorieCheck, Weltraum: true}) 
 
     } else if (activeCategory === "Natur") {
-      //console.log(activeCategory)
-    //setCategorieCheck({Weltraum:false, Natur:true, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
-    setCategorieCheck({...categorieCheck, Natur: true}) //destructuring googlen/slack -> "{}"","der Rest", "das andere" -> neues Objeckt
-    
+    setCategorieCheck({...categorieCheck, Natur: true}) 
     } else if (activeCategory === "Geschichte") {
-      //console.log(activeCategory)
-    //setCategorieCheck({Weltraum:false, Natur:true, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
     setCategorieCheck({...categorieCheck, Geschichte: true}) //destructuring googlen/slack -> "{}"","der Rest", "das andere" -> neues Objeckt
-    
     }
     else if (activeCategory === "Physik") {
-      //console.log(activeCategory)
-    //setCategorieCheck({Weltraum:false, Natur:true, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
     setCategorieCheck({...categorieCheck, Physik: true}) //destructuring googlen/slack -> "{}"","der Rest", "das andere" -> neues Objeckt
-   
     }
     else if (activeCategory === "Geografie") {
-      //console.log(activeCategory)
-    //setCategorieCheck({Weltraum:false, Natur:true, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
     setCategorieCheck({...categorieCheck, Geografie: true}) //destructuring googlen/slack -> "{}"","der Rest", "das andere" -> neues Objeckt
-  
     }
     else if (activeCategory === "Menschen") {
-      //console.log(activeCategory)
-    //setCategorieCheck({Weltraum:false, Natur:true, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
     setCategorieCheck({...categorieCheck, Menschen: true}) //destructuring googlen/slack -> "{}"","der Rest", "das andere" -> neues Objeckt
     
     }

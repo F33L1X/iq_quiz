@@ -105,6 +105,16 @@ width: 50px;
   text-shadow: 1px 1px black;
   text-align: center;
 }
+.boxDead {
+  background-color: beige;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 5px 2px 7px 0px;
+  flex: 1 0 33%; 
+  opacity: 0.8;
+}
 /*end Category choose*/
 /*---------------------------------------*/
 /*Quizgame*/
