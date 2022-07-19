@@ -64,7 +64,7 @@ function App() {
           <Grid item xs={12} sm={12} md={12} lg={12} justifyContent="center" alignItems="center" irection="row" container rowSpacing={0} columnSpacing={0} >
             <Routes>
               <Route path ="/" element={<WelcomeFeed />} /> 
-              <Route path ="/categories" element={<CategorieChoose categories={categories} questions={questions} setActiveCategory={setActiveCategory} setQuestionStep={setQuestionStep} />} />
+              <Route path ="/categories" element={<CategorieChoose categories={categories} questions={questions} setActiveCategory={setActiveCategory} setQuestionStep={setQuestionStep} categorieCheck={categorieCheck} />} />
               <Route path ="/quizgame" element={<QuizGame questions={questions} activeCategory={activeCategory} questionStep={questionStep} setQuestionStep={setQuestionStep} answers={answers} setAnswers={setAnswers} answersRight={answersRight} setAnswersRight={setAnswersRight} categorieCheck={categorieCheck} setCategorieCheck={setCategorieCheck}/>} />
             </Routes>
           </Grid>

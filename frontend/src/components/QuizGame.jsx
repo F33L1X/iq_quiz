@@ -13,7 +13,7 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
   const getQuestion = () => {
     if (questionStep !== -1 && questionStep < 10) {
       const result = questions.filter(e => e.Kategorie === activeCategory); 
-      console.log(questionStep)
+      //console.log(questionStep)
       return result[questionStep].question; 
     } else return null;
   }
@@ -39,17 +39,25 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
   const nextQuestion = (korrekt) => {
     if (questionStep < 10) {
       if (korrekt === true) {
-      console.log("Die Antwort war richtig")
+      //console.log("Die Antwort war richtig")
       setQuestionStep(questionStep+1);
       setAnswersRight (answersRight+1)
       } else {
-      console.log("Die Antwort war falsch")
+      //console.log("Die Antwort war falsch")
       setQuestionStep(questionStep+1);
       }
     }
+
     if (questionStep == 9) {
     setQuestionStep(-1)
-    setCategorieCheck({Weltraum:true, Natur:false, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
+    if (questions.Kategorie = "Weltraum") {
+    setCategorieCheck({Weltraum:true})
+    console.log("hier weltall")
+    } else if (questions.Kategorie = "Natur") {
+    setCategorieCheck({Natur:true})
+    console.log("hier Natur")
+    }
+
     navigate ('/categories');
     
     } 
