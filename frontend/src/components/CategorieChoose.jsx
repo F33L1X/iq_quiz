@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from "react";
+import { useEffect } from "react";
 //import {useNavigate} from 'react-router-dom';
 import image1 from "../imgs/Weltall.jpg";
 import image2 from "../imgs/Nature.jpg";
@@ -8,18 +8,19 @@ import image4 from "../imgs/Physik.jpg";
 import image5 from "../imgs/Geografie.jpg";
 import image6 from "../imgs/Menschen.jpg";
 import {useNavigate} from 'react-router-dom';
-import { accordionActionsClasses } from '@mui/material';
+//import { accordionActionsClasses } from '@mui/material';
 
 //mit Sebastian questions
 function CategorieChoose({setActiveCategory, setQuestionStep, categorieCheck}) {
 
   const navigate = useNavigate();
-
+  
   function QuizGameWeltraum () {
     if (categorieCheck.Weltraum===false){
     setActiveCategory("Weltraum");
     setQuestionStep(0);
     navigate ('/quizgame');
+  
   }
   }
   function QuizGameNature () {

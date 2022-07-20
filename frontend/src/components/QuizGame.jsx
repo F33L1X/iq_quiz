@@ -55,7 +55,7 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
     setQuestionStep(-1)
     setQuestionCounter(0)
     if (activeCategory === "Weltraum") {
-    setCategorieCheck({...categorieCheck, Weltraum: true}) 
+    setCategorieCheck({...categorieCheck, Weltraum: true})
 
     } else if (activeCategory === "Natur") {
     setCategorieCheck({...categorieCheck, Natur: true}) 

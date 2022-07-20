@@ -10,6 +10,7 @@ import CategorieChoose from './components/CategorieChoose';
 import Navbar from './components/NavBar'
 import QuizGame from './components/QuizGame'
 import SignUp from './components/SignUp'
+import Scoreboard from './components/Scoreboard'
 
 
 //import DenseTable from './components/Scoreboard'   //->Soll angezeigt werden wenn Game gepielt wurde
@@ -67,10 +68,11 @@ function App() {
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={12} justifyContent="center" alignItems="center" irection="row" container rowSpacing={0} columnSpacing={0} >
             <Routes>
-              <Route path ="/" element={<WelcomeFeed />} /> 
+              <Route path ="/" element={<WelcomeFeed categorieCheck={categorieCheck} />} /> 
               <Route path ="/categories" element={<CategorieChoose categories={categories} questions={questions} setActiveCategory={setActiveCategory} setQuestionStep={setQuestionStep} categorieCheck={categorieCheck} />} />
               <Route path ="/quizgame" element={<QuizGame questions={questions} activeCategory={activeCategory} questionStep={questionStep} setQuestionStep={setQuestionStep} answers={answers} setAnswers={setAnswers} answersRight={answersRight} setAnswersRight={setAnswersRight} categorieCheck={categorieCheck} setCategorieCheck={setCategorieCheck} questionCounter={questionCounter} setQuestionCounter={setQuestionCounter}/>} />
               <Route path ="/SignUp" element={<SignUp />} /> 
+              <Route path ="/scoreboard" element={<Scoreboard />} />
             </Routes>
           </Grid>
           <Grid item xs={12}>

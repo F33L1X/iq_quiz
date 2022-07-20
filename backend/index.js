@@ -751,21 +751,21 @@ var questions = [
   
  id: "35",
  Kategorie: "Physik",
- question: "",
+ question: "placeholder",
  answerA: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },
  answerB: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },  
  answerC: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },
  answerD: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
  }
 },
@@ -775,21 +775,21 @@ var questions = [
   
  id: "36",
  Kategorie: "Physik",
- question: "",
+ question: "placeholder",
  answerA: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },
  answerB: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },  
  answerC: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },
  answerD: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
  }
 },
@@ -799,21 +799,21 @@ var questions = [
   
  id: "37",
  Kategorie: "Physik",
- question: "",
+ question: "placeholder",
  answerA: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },
  answerB: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },  
  answerC: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },
  answerD: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
  }
 },
@@ -823,21 +823,21 @@ var questions = [
   
  id: "38",
  Kategorie: "Physik",
- question: "",
+ question: "placeholder",
  answerA: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },
  answerB: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },  
  answerC: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },
  answerD: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
  }
 },
@@ -847,49 +847,470 @@ var questions = [
   
  id: "39",
  Kategorie: "Physik",
- question: "",
+ question: "placeholder",
  answerA: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },
  answerB: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },  
  answerC: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },
  answerD: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
  }
 },
 {
      
-  //Physik
   
+ 
  id: "40",
  Kategorie: "Physik",
  question: "",
  answerA: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },
  answerB: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },  
  answerC: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
   },
  answerD: {
-   answer: "",
+   answer: "placeholder",
    rightAnswer: false
  }
-}
-   
+},
+//Geoprafie
+{ 
+ id: "41",
+ Kategorie: "Geografie",
+ question: "placeholder",
+ answerA: {
+   answer: "placeholder",
+   rightAnswer: false
+  },
+ answerB: {
+   answer: "placeholder",
+   rightAnswer: false
+  },  
+ answerC: {
+   answer: "placeholder",
+   rightAnswer: false
+  },
+ answerD: {
+   answer: "placeholder",
+   rightAnswer: false
+ }
+},
+{ 
+  id: "42",
+  Kategorie: "Geografie",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "43",
+  Kategorie: "Geografie",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "44",
+  Kategorie: "Geografie",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "45",
+  Kategorie: "Geografie",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "46",
+  Kategorie: "Geografie",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "47",
+  Kategorie: "Geografie",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "48",
+  Kategorie: "Geografie",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "49",
+  Kategorie: "Geografie",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "50",
+  Kategorie: "Geografie",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+//Menschen
+ { 
+  id: "51",
+  Kategorie: "Menschen",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "52",
+  Kategorie: "Menschen",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "53",
+  Kategorie: "Menschen",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "54",
+  Kategorie: "Menschen",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "55",
+  Kategorie: "Menschen",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "56",
+  Kategorie: "Menschen",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "57",
+  Kategorie: "Menschen",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "58",
+  Kategorie: "Menschen",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "59",
+  Kategorie: "Menschen",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ },
+ { 
+  id: "60",
+  Kategorie: "Menschen",
+  question: "placeholder",
+  answerA: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerB: {
+    answer: "placeholder",
+    rightAnswer: false
+   },  
+  answerC: {
+    answer: "placeholder",
+    rightAnswer: false
+   },
+  answerD: {
+    answer: "placeholder",
+    rightAnswer: false
+  }
+ }
 ] 
 
 app.get('/', (req, res) => {
