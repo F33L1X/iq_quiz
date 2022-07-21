@@ -12,7 +12,6 @@ function GameStart({categories}) {
   const navigate = useNavigate();
 
   function startGame() {    //axios 
-    localStorage.setItem('Weltraum', 'false');
     console.log(categories)
     navigate ('/categories');
     
