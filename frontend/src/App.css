@@ -105,6 +105,24 @@ width: 50px;
   text-shadow: 1px 1px black;
   text-align: center;
 }
+.InnerText1 {
+  position: relative;
+  color:red;
+  text-shadow: 1px 1px black;
+  text-align: center;
+}
+.InnerText2 {
+  position: relative;
+  color:yellow;
+  text-shadow: 1px 1px black;
+  text-align: center;
+}
+.InnerText3 {
+  position: relative;
+  color:green;
+  text-shadow: 1px 1px black;
+  text-align: center;
+}
 .boxDead {
   background-color: beige;
   width: 100px;
@@ -114,6 +132,10 @@ width: 50px;
   box-shadow: 5px 2px 7px 0px;
   flex: 1 0 33%; 
   opacity: 0.8;
+}
+.GameFinPop{
+  display: flex;
+  justify-content: center;
 }
 /*end Category choose*/
 /*---------------------------------------*/
@@ -165,6 +187,17 @@ width: 50px;
   grid-column-start: 3;
   grid-column-end: 4;
   border-radius: 5px;
+}
+.PopUpContainer {
+  display: flex;
+  justify-content: center;
+}
+.PopUp {
+  background-color: #2196F3;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 2px 4px 8px 1px; 
+  font-family: fantasy;
 }
 /*end Quizgame*/
 /*---------------------------------------*/

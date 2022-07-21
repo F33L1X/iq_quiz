@@ -13,6 +13,7 @@ import SignUp from './components/SignUp'
 import Scoreboard from './components/Scoreboard'
 
 
+
 //import DenseTable from './components/Scoreboard'   //->Soll angezeigt werden wenn Game gepielt wurde
 
 async function loadQuestions() {
@@ -45,9 +46,16 @@ function App() {
   const [activeCategory, setActiveCategory] = useState("");
   const [questionStep, setQuestionStep] = useState(-1);
   const [answers, setAnswers] = useState([]);
-  const [answersRight, setAnswersRight] = useState(0);
-  const [categorieCheck, setCategorieCheck] = useState({Weltraum:false, Natur:false, Geschichte:false, Physik:false, Geografie:false, Menschen:false});
-  const [questionCounter, setQuestionCounter] = useState(0);
+  const [answersRight1, setAnswersRight1] = useState(0);
+  const [answersRight2, setAnswersRight2] = useState(0);
+  const [answersRight3, setAnswersRight3] = useState(0);
+  const [answersRight4, setAnswersRight4] = useState(0);
+  const [answersRight5, setAnswersRight5] = useState(0);
+  const [answersRight6, setAnswersRight6] = useState(0);
+  const [categorieCheck, setCategorieCheck] = useState({Weltraum:false, Natur:false, Geschichte:false, Physik:false, Geografie:false, Menschen:false}); //Hier local storage anwenden
+  const [questionCounter, setQuestionCounter] = useState(1);
+  const [questPopUp, setQuestPopUp] = useState(false);
+  
     
 
   useEffect(() => {
@@ -69,8 +77,8 @@ function App() {
           <Grid item xs={12} sm={12} md={12} lg={12} justifyContent="center" alignItems="center" irection="row" container rowSpacing={0} columnSpacing={0} >
             <Routes>
               <Route path ="/" element={<WelcomeFeed categorieCheck={categorieCheck} />} /> 
-              <Route path ="/categories" element={<CategorieChoose categories={categories} questions={questions} setActiveCategory={setActiveCategory} setQuestionStep={setQuestionStep} categorieCheck={categorieCheck} />} />
-              <Route path ="/quizgame" element={<QuizGame questions={questions} activeCategory={activeCategory} questionStep={questionStep} setQuestionStep={setQuestionStep} answers={answers} setAnswers={setAnswers} answersRight={answersRight} setAnswersRight={setAnswersRight} categorieCheck={categorieCheck} setCategorieCheck={setCategorieCheck} questionCounter={questionCounter} setQuestionCounter={setQuestionCounter}/>} />
+              <Route path ="/categories" element={<CategorieChoose categories={categories} questions={questions} setActiveCategory={setActiveCategory} setQuestionStep={setQuestionStep} categorieCheck={categorieCheck} answersRight1={answersRight1} setAnswersRight1={setAnswersRight1} answersRight2={answersRight2} setAnswersRight2={setAnswersRight2} answersRight3={answersRight3} setAnswersRight3={setAnswersRight3} answersRight4={answersRight4} setAnswersRight4={setAnswersRight4} answersRight5={answersRight5} setAnswersRight5={setAnswersRight5} answersRight6={answersRight6} setAnswersRight6={setAnswersRight6}/>} />
+              <Route path ="/quizgame" element={<QuizGame questions={questions} activeCategory={activeCategory} questionStep={questionStep} setQuestionStep={setQuestionStep} answers={answers} setAnswers={setAnswers} categorieCheck={categorieCheck} setCategorieCheck={setCategorieCheck} questionCounter={questionCounter} setQuestionCounter={setQuestionCounter} setQuestPopUp={setQuestPopUp} questPopUp={questPopUp} answersRight1={answersRight1} setAnswersRight1={setAnswersRight1} answersRight2={answersRight2} setAnswersRight2={setAnswersRight2} answersRight3={answersRight3} setAnswersRight3={setAnswersRight3} answersRight4={answersRight4} setAnswersRight4={setAnswersRight4} answersRight5={answersRight5} setAnswersRight5={setAnswersRight5} answersRight6={answersRight6} setAnswersRight6={setAnswersRight6}/>} />
               <Route path ="/SignUp" element={<SignUp />} /> 
               <Route path ="/scoreboard" element={<Scoreboard />} />
             </Routes>

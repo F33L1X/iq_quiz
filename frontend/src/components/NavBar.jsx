@@ -6,7 +6,7 @@ export default function Navbar () {
     <a href="/" className="siteTitle" style={{ backgroundImage:`url(${Logo})`,backgroundRepeat:"no-repeat"}}></a>
     <ul>
       <li>
-        <a className="active" href="SignIn">Sign In</a>
+        <a className="active" href="/SignIn">Sign In</a>
       </li>
       <li>
         <a className="active" href="/SignUp">Sign Up</a>

@@ -1107,7 +1107,7 @@ var questions = [
   question: "placeholder",
   answerA: {
     answer: "placeholder",
-    rightAnswer: false
+    rightAnswer: true
    },
   answerB: {
     answer: "placeholder",
@@ -1128,7 +1128,7 @@ var questions = [
   question: "placeholder",
   answerA: {
     answer: "placeholder",
-    rightAnswer: false
+    rightAnswer: true
    },
   answerB: {
     answer: "placeholder",
@@ -1149,7 +1149,7 @@ var questions = [
   question: "placeholder",
   answerA: {
     answer: "placeholder",
-    rightAnswer: false
+    rightAnswer: true
    },
   answerB: {
     answer: "placeholder",
@@ -1170,7 +1170,7 @@ var questions = [
   question: "placeholder",
   answerA: {
     answer: "placeholder",
-    rightAnswer: false
+    rightAnswer: true
    },
   answerB: {
     answer: "placeholder",
@@ -1191,7 +1191,7 @@ var questions = [
   question: "placeholder",
   answerA: {
     answer: "placeholder",
-    rightAnswer: false
+    rightAnswer: true
    },
   answerB: {
     answer: "placeholder",
@@ -1212,7 +1212,7 @@ var questions = [
   question: "placeholder",
   answerA: {
     answer: "placeholder",
-    rightAnswer: false
+    rightAnswer: true
    },
   answerB: {
     answer: "placeholder",
@@ -1233,7 +1233,7 @@ var questions = [
   question: "placeholder",
   answerA: {
     answer: "placeholder",
-    rightAnswer: false
+    rightAnswer: true
    },
   answerB: {
     answer: "placeholder",
@@ -1254,7 +1254,7 @@ var questions = [
   question: "placeholder",
   answerA: {
     answer: "placeholder",
-    rightAnswer: false
+    rightAnswer: true
    },
   answerB: {
     answer: "placeholder",
@@ -1275,7 +1275,7 @@ var questions = [
   question: "placeholder",
   answerA: {
     answer: "placeholder",
-    rightAnswer: false
+    rightAnswer: true
    },
   answerB: {
     answer: "placeholder",
@@ -1296,7 +1296,7 @@ var questions = [
   question: "placeholder",
   answerA: {
     answer: "placeholder",
-    rightAnswer: false
+    rightAnswer: true
    },
   answerB: {
     answer: "placeholder",
