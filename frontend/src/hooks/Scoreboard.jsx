@@ -28,10 +28,10 @@ export default function scoreBoard() {
         <TableHead>
           <TableRow>
             <TableCell></TableCell>
-            <TableCell style={{ fontSize:"14px", color:"#ccf0bb", textShadow: "1px 1px black"}}  align="right">Richtige [%]</TableCell>
-            <TableCell style={{ fontSize:"14px", color:"#ccf0bb", textShadow: "1px 1px black"}} align="right">Beste Kategorie</TableCell>
-            <TableCell style={{ fontSize:"14px", color:"#ccf0bb", textShadow: "1px 1px black"}} align="right">Schlechteste Kategorie</TableCell>
-            <TableCell style={{ fontSize:"14px", color:"#ccf0bb", textShadow: "1px 1px black"}} align="right">IQ-Score</TableCell>
+            <TableCell style={{ fontSize:"14px", color:"#ccf0bb", textShadow: "1px 1px black"}}  align="center">Richtige [%]</TableCell>
+            <TableCell style={{ fontSize:"14px", color:"#ccf0bb", textShadow: "1px 1px black"}} align="center">Beste Kategorie</TableCell>
+            <TableCell style={{ fontSize:"14px", color:"#ccf0bb", textShadow: "1px 1px black"}} align="center">Schlechteste Kategorie</TableCell>
+            <TableCell style={{ fontSize:"14px", color:"#ccf0bb", textShadow: "1px 1px black"}} align="center">IQ-Score</TableCell>
           </TableRow>
         </TableHead>
         <TableBody >
@@ -43,10 +43,10 @@ export default function scoreBoard() {
               <TableCell component="th" scope="row" style={{ fontSize:"14px", color:"#b5e6e8", textShadow: "1px 1px black"}}>
                 {row.name}
               </TableCell>
-              <TableCell style={{ fontSize:"14px", color:"white", textShadow: "1px 1px black"}} align="right">{row.calories}</TableCell>
-              <TableCell style={{ fontSize:"14px", color:"white", textShadow: "1px 1px black"}} align="right">{row.fat}</TableCell>
-              <TableCell style={{ fontSize:"14px", color:"white", textShadow: "1px 1px black"}} align="right">{row.carbs}</TableCell>
-              <TableCell style={{ fontSize:"14px", color:"white", textShadow: "1px 1px black"}} align="right">{row.protein}</TableCell>
+              <TableCell style={{ fontSize:"14px", color:"white", textShadow: "1px 1px black"}} align="center">{row.calories}</TableCell>
+              <TableCell style={{ fontSize:"14px", color:"white", textShadow: "1px 1px black"}} align="center">{row.fat}</TableCell>
+              <TableCell style={{ fontSize:"14px", color:"white", textShadow: "1px 1px black"}} align="center">{row.carbs}</TableCell>
+              <TableCell style={{ fontSize:"14px", color:"white", textShadow: "1px 1px black"}} align="center">{row.protein}</TableCell>
             </TableRow>
           ))}
         </TableBody>
