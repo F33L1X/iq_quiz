@@ -95,6 +95,7 @@ function QuizGame({questions, activeCategory, questionStep, setQuestionStep, ans
     setQuestionCounter(1)
     if (activeCategory === "Weltraum") {
     setCategorieCheck({...categorieCheck, Weltraum: true})
+    //localStorage.setItem('Weltraum', 'true');
     } else if (activeCategory === "Natur") {
     setCategorieCheck({...categorieCheck, Natur: true}) 
     } else if (activeCategory === "Geschichte") {

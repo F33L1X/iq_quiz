@@ -14,6 +14,7 @@ import AlertDialog from  '../hooks/AlertDialog'
 //mit Sebastian questions
 function CategorieChoose({setActiveCategory, setQuestionStep, categorieCheck, answersRight1, answersRight2, answersRight3, answersRight4, answersRight5, answersRight6}) {
 
+  //const deadCheck1 = localStorage.getItem('Weltraum');
 
   const navigate = useNavigate();
   

@@ -10,7 +10,7 @@ import CategorieChoose from './components/CategorieChoose';
 import Navbar from './components/NavBar'
 import QuizGame from './components/QuizGame'
 import SignUp from './components/SignUp'
-import Scoreboard from './components/Scoreboard'
+import Scoreboard from './hooks/Scoreboard'
 
 
 
@@ -55,6 +55,7 @@ function App() {
   const [categorieCheck, setCategorieCheck] = useState({Weltraum:false, Natur:false, Geschichte:false, Physik:false, Geografie:false, Menschen:false}); //Hier local storage anwenden
   const [questionCounter, setQuestionCounter] = useState(1);
   const [questPopUp, setQuestPopUp] = useState(false);
+  
   
     
 
