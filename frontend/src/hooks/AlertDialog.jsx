@@ -22,22 +22,22 @@ export default function AlertDialog() {
       <Button style={{color:"#1e4075", backgroundColor: "#4f9c59",fontSize: "20px",textTransform: 'none'}} variant="contained" onClick={handleClickOpen}>
         ✔ Congratulations ✔
       </Button>
-      <Dialog
+      <Dialog 
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">
+        <DialogTitle style={{color:"#1e4075"}}>
           {"Spiel beendet. Das Scoreboard steht nun zur Verfügung."}
         </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
+        <DialogContent >
+          <DialogContentText>
             
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button style={{textTransform: 'none'}} href="./" onClick={handleClose} autoFocus>
+          <Button style={{textTransform: 'none', }} href="./" onClick={handleClose} autoFocus>
             Take a look
           </Button>
         </DialogActions>
