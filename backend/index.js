@@ -3,6 +3,14 @@ const { v4: uuidv4 } = require('uuid');    //backendspezifisch  ... or using Com
 
 const app = express()
 const port = 8000   //react nutzt 3000
+const mongoose = require('mongoose');
+
+app.use(async (req, res, next) => {   //middleware
+  await mongoose.connect("mongodb+srv://quizadmin:quizadmin3@cluster0.hsbd0.mongodb.net/?retryWrites=true&w=majority"); 
+  next();
+});
+
+//mongodb+srv://quizadmin:quizadmin3@cluster0.hsbd0.mongodb.net/?retryWrites=true&w=majority  //connectionString ->MongoDB verbingdung (Mongoose benötigt)
 
 var categories = [
   "Weltraum",
@@ -13,6 +21,29 @@ var categories = [
   "Menschen"
 ]
 
+const questionSchema = new mongoose.Schema({
+  id: String,
+  Kategorie: String,
+  question: String,
+  AnswerA: {
+    answer: String,
+    rightAnswer: Boolean
+  },
+  AnswerB: {
+    answer: String,
+    rightAnswer: Boolean
+  },
+  AnswerC: {
+    answer: String,
+    rightAnswer: Boolean
+  },
+  AnswerD: {
+    answer: String,
+    rightAnswer: Boolean
+  }
+})
+
+const Question = mongoose.model("questions", questionSchema)
 
 var questions = [
   //Weltall
@@ -1312,6 +1343,13 @@ var questions = [
   }
  }
 ] 
+
+app.get('/api/test', (req, res) => {
+  questions.map(async e => {
+    const doc = await Question(e);
+    await doc.save();
+  })               //async wiel daten in datenbank geschrieben werden, erst zur nächsten wenn fertig (warten)
+})
 
 app.get('/', (req, res) => {
   res.send('Hello World')
