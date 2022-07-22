@@ -1371,13 +1371,6 @@ var questions = [
  }
 ] 
 
-app.get('/api/test', (req, res) => {
-  questions.map(async e => {
-    const doc = await Question(e);
-    await doc.save();
-  })               //async wiel daten in datenbank geschrieben werden, erst zur nächsten wenn fertig (warten)
-})
-
 app.get('/', (req, res) => {
   res.send('Hello World')
 })
@@ -1402,7 +1395,7 @@ app.get('/api/categories', (req, res) => {
 
 //Game Categories   <-----
 app.get('/api/quizgame', (req, res) => {   
-  //res.status(200).send(questions)
+  res.status(200).send(questions)
 })
 
 //Game Categories End   <-----
@@ -1412,4 +1405,3 @@ app.get('/api/quizgame', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
-
