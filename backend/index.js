@@ -43,7 +43,20 @@ const questionSchema = new mongoose.Schema({
   }
 })
 
+
+/* const gameStageSchema = new mongoose.Schema({
+ Weltraum: Boolean,
+ Natur: Boolean,
+ Geschichte: Boolean,
+ Physik: Boolean,
+ Geografie: Boolean,
+ Menschen: Boolean
+}) */
+
 const Question = mongoose.model("questions", questionSchema)
+//const GameStage = mongoose.model("categorieCheck", gameStageSchema)
+
+//const [categorieCheck, setCategorieCheck] = useState({Weltraum:false, Natur:false, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
 
 var questions = [
   //Weltall

@@ -6,7 +6,7 @@ import CategorieChoose from './CategorieChoose';
 
 
 function QuizGame({questions, activeCategory, questionStep, setQuestionStep, answers, setAnswers, categorieCheck, setCategorieCheck, questionCounter, setQuestionCounter, setQuestPopUp, questPopUp, answersRight1, setAnswersRight1, answersRight2, setAnswersRight2, answersRight3, setAnswersRight3, answersRight4, setAnswersRight4, answersRight5, setAnswersRight5, answersRight6, setAnswersRight6}) {
-
+  
   const [question, setQuestion] = useState("");
   const navigate = useNavigate();
 
