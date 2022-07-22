@@ -21,7 +21,7 @@ var categories = [
   "Menschen"
 ]
 
-const questionSchema = new mongoose.Schema({
+ const questionSchema = new mongoose.Schema({
   id: String,
   Kategorie: String,
   question: String,
@@ -41,23 +41,37 @@ const questionSchema = new mongoose.Schema({
     answer: String,
     rightAnswer: Boolean
   }
+}) 
+ 
+
+const gameStageSchema = new mongoose.Schema({  //um Dead Boxes zu definieren
+ Boolean
+})
+
+const scoreSchema = new mongoose.Schema({        //für Scoreboard
+  Weltraum: Number,  
+  Natur: Number,
+  Geschichte: Number,
+  Physik: Number,
+  Geografie: Number,
+  Menschen: Number
+})
+
+const userSchema = new mongoose.Schema({
+eMail: String,
+password: String,
+name: String
 })
 
 
-/* const gameStageSchema = new mongoose.Schema({
- Weltraum: Boolean,
- Natur: Boolean,
- Geschichte: Boolean,
- Physik: Boolean,
- Geografie: Boolean,
- Menschen: Boolean
-}) */
 
-const Question = mongoose.model("questions", questionSchema)
-//const GameStage = mongoose.model("categorieCheck", gameStageSchema)
+const Question = mongoose.model("questions", questionSchema) 
+const GameStage = mongoose.model("gamestage", gameStageSchema)
+const Score = mongoose.model("score", scoreSchema)
+const User = mongoose.model("user", userSchema)
 
-//const [categorieCheck, setCategorieCheck] = useState({Weltraum:false, Natur:false, Geschichte:false, Physik:false, Geografie:false, Menschen:false})
 
+var gameStage = false
 var questions = [
   //Weltall
   {
@@ -1388,7 +1402,7 @@ app.get('/api/categories', (req, res) => {
 
 //Game Categories   <-----
 app.get('/api/quizgame', (req, res) => {   
-  res.status(200).send(questions)
+  //res.status(200).send(questions)
 })
 
 //Game Categories End   <-----
