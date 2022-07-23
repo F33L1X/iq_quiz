@@ -10,6 +10,7 @@ import CategorieChoose from './components/CategorieChoose';
 import Navbar from './components/NavBar'
 import QuizGame from './components/QuizGame'
 import SignUp from './components/SignUp'
+import SignIn from './components/SignIn'
 import Scoreboard from './hooks/Scoreboard'
 
 
@@ -81,6 +82,7 @@ function App() {
               <Route path ="/categories" element={<CategorieChoose categories={categories} questions={questions} setActiveCategory={setActiveCategory} setQuestionStep={setQuestionStep} categorieCheck={categorieCheck} answersRight1={answersRight1} setAnswersRight1={setAnswersRight1} answersRight2={answersRight2} setAnswersRight2={setAnswersRight2} answersRight3={answersRight3} setAnswersRight3={setAnswersRight3} answersRight4={answersRight4} setAnswersRight4={setAnswersRight4} answersRight5={answersRight5} setAnswersRight5={setAnswersRight5} answersRight6={answersRight6} setAnswersRight6={setAnswersRight6}/>} />
               <Route path ="/quizgame" element={<QuizGame questions={questions} activeCategory={activeCategory} questionStep={questionStep} setQuestionStep={setQuestionStep} answers={answers} setAnswers={setAnswers} categorieCheck={categorieCheck} setCategorieCheck={setCategorieCheck} questionCounter={questionCounter} setQuestionCounter={setQuestionCounter} setQuestPopUp={setQuestPopUp} questPopUp={questPopUp} answersRight1={answersRight1} setAnswersRight1={setAnswersRight1} answersRight2={answersRight2} setAnswersRight2={setAnswersRight2} answersRight3={answersRight3} setAnswersRight3={setAnswersRight3} answersRight4={answersRight4} setAnswersRight4={setAnswersRight4} answersRight5={answersRight5} setAnswersRight5={setAnswersRight5} answersRight6={answersRight6} setAnswersRight6={setAnswersRight6}/>} />
               <Route path ="/SignUp" element={<SignUp />} /> 
+              <Route path ="/SignIn" element={<SignIn />} />
               <Route path ="/scoreboard" element={<Scoreboard />} />
             </Routes>
           </Grid>

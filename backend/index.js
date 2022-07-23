@@ -63,8 +63,6 @@ password: String,
 name: String
 })
 
-
-
 const Question = mongoose.model("questions", questionSchema) 
 const GameStage = mongoose.model("gamestage", gameStageSchema)
 const Score = mongoose.model("score", scoreSchema)

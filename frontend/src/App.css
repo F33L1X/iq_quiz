@@ -222,3 +222,22 @@ width: 50px;
 }
 /*end footer*/ 
 /*---------------------------------------*/
+
+.SignupContainer{
+  display: flex;
+  flex-direction: column;
+  background-color: #1e4075;
+  font-size: 14px;
+  height: 220px;
+  font-family: monospace;
+  border-radius: 20px;
+  box-shadow: 1px 2px 10px 0px;
+}
+.SubmitButton{
+ 
+}
+.SubmitContainer{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
