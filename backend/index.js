@@ -73,7 +73,7 @@ var gameStage = false
 var questions = [
   //Weltall
   {
-    id: "1",
+    id: "111",
     Kategorie: "Weltraum",
     question: "Welcher Planet unseres Sonnensystems ist am dichtesten zur Sonne",
     answerA: {
@@ -1373,14 +1373,14 @@ app.get('/', (req, res) => {
   res.send('Hello World')
 })
 
-app.get('/api/question', (req, res) => {    //http://localhost:8000/api/questions?id=1
+ app.get('/api/question', (req, res) => {    //http://localhost:8000/api/questions?id=1
     console.log(req.query.id)
     questions.map(e => {
       if (e.id === req.query.id) {
         res.status(200).send(e)
       }
     }) 
-  })
+  }) 
 
 app.get('/api/questions', (req, res) => {    
       res.status(200).send(questions)
