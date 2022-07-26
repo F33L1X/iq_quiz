@@ -1,16 +1,65 @@
 const express = require('express')  //middleware //node index.js
 const { v4: uuidv4 } = require('uuid');    //backendspezifisch  ... or using CommonJS syntax:
+const bcrypt = require('bcryptjs')
 
 const app = express()
 const port = 8000   //react nutzt 3000
 const mongoose = require('mongoose');
 
 app.use(async (req, res, next) => {   //middleware
-  await mongoose.connect("mongodb+srv://quizadmin:quizadmin3@cluster0.hsbd0.mongodb.net/?retryWrites=true&w=majority"); 
+  await mongoose.connect("mongodb+srv://quizadmin:quizadmin3@cluster0.hsbd0.mongodb.net/?retryWrites=true&w=majority");  //middleware beim starten verbindung zur datenbank
   next();
 });
 
 //mongodb+srv://quizadmin:quizadmin3@cluster0.hsbd0.mongodb.net/?retryWrites=true&w=majority  //connectionString ->MongoDB verbingdung (Mongoose benötigt)
+//regestrierung und login aus social project
+
+app.post('/api/register', async (req, res) => {
+	console.log(req.body)
+	try {
+		const newPassword = await bcrypt.hash(req.body.password, 10)
+		await User.create({
+			username: req.body.username,
+			password: newPassword,
+		})
+		res.json({ status: 'ok' })
+	} catch (err) {
+        console.log(err)
+		res.json({ status: 'error', error: 'Duplicate username' })
+	}
+})
+app.post('/api/login', async (req,res) => {
+  const user = await User.findOne({
+		username: req.body.username,
+	})
+
+	if (!user) {
+		console.log("wwww")
+		res.status(401).send({ status: 'error', error: 'Invalid login' });
+		return;
+	}
+
+	const isPasswordValid = await bcrypt.compare(
+		req.body.password,
+		user.password
+	)
+
+    if (isPasswordValid) {
+		const token = jwt.sign(
+			{
+				username: user.username,
+			},
+			'secret123'
+		)
+
+		res.json({ status: 'ok', access: token });
+		return;
+	} else {
+		res.status(401).json({ status: 'error', access: false });
+		return;
+	}
+})
+
 
 var categories = [
   "Weltraum",
@@ -42,35 +91,27 @@ var categories = [
     rightAnswer: Boolean
   }
 }) 
- 
 
-const gameStageSchema = new mongoose.Schema({  //um Dead Boxes zu definieren
- Boolean
-})
-
-const scoreSchema = new mongoose.Schema({        //für Scoreboard
+const userSchema = new mongoose.Schema({
+eMail: String,
+password: String,
+name: String,
+gameStage: Boolean,
+score: {
   Weltraum: Number,  
   Natur: Number,
   Geschichte: Number,
   Physik: Number,
   Geografie: Number,
   Menschen: Number
+}
 })
 
-const userSchema = new mongoose.Schema({
-eMail: String,
-password: String,
-name: String
-})
-
-const Question = mongoose.model("questions", questionSchema) 
-const GameStage = mongoose.model("gamestage", gameStageSchema)
-const Score = mongoose.model("score", scoreSchema)
+const Question = mongoose.model("questions", questionSchema)  
 const User = mongoose.model("user", userSchema)
 
 
-var gameStage = false
-var questions = [
+var questions = [   
   //Weltall
   {
     id: "111",
@@ -1368,6 +1409,18 @@ var questions = [
   }
  }
 ] 
+//kann gelöscht werden
+
+/* app.get('/api/savequestion', async (req, res) => {    //http://localhost:8000/api/questions?id=1
+  console.log(req.query.id)
+  questions.map(async e => {
+    console.log(e);
+    const doc = await Question(e);
+    await doc.save()
+  }) 
+})  */  //einmalig um questions in DB zu kriegen
+
+//routen sind die API frontend kommunizert mit routen nie direkt mit datenbank
 
 app.get('/', (req, res) => {
   res.send('Hello World')

@@ -13,8 +13,10 @@ import SignUp from './components/SignUp'
 import SignIn from './components/SignIn'
 import Scoreboard from './hooks/Scoreboard'
 
+//import Login from './components/login'
 
 
+//axios ist der weg um mit dem 
 //import DenseTable from './components/Scoreboard'   //->Soll angezeigt werden wenn Game gepielt wurde
 
 async function loadQuestions() {
@@ -56,6 +58,9 @@ function App() {
   const [categorieCheck, setCategorieCheck] = useState({Weltraum:false, Natur:false, Geschichte:false, Physik:false, Geografie:false, Menschen:false}); //Hier local storage anwenden
   const [questionCounter, setQuestionCounter] = useState(1);
   const [questPopUp, setQuestPopUp] = useState(false);
+
+  const [user, setUser] = useState("");
+  const [token, setToken] = useState("");
   
   
     
@@ -82,7 +87,7 @@ function App() {
               <Route path ="/categories" element={<CategorieChoose categories={categories} questions={questions} setActiveCategory={setActiveCategory} setQuestionStep={setQuestionStep} categorieCheck={categorieCheck} answersRight1={answersRight1} setAnswersRight1={setAnswersRight1} answersRight2={answersRight2} setAnswersRight2={setAnswersRight2} answersRight3={answersRight3} setAnswersRight3={setAnswersRight3} answersRight4={answersRight4} setAnswersRight4={setAnswersRight4} answersRight5={answersRight5} setAnswersRight5={setAnswersRight5} answersRight6={answersRight6} setAnswersRight6={setAnswersRight6}/>} />
               <Route path ="/quizgame" element={<QuizGame questions={questions} activeCategory={activeCategory} questionStep={questionStep} setQuestionStep={setQuestionStep} answers={answers} setAnswers={setAnswers} categorieCheck={categorieCheck} setCategorieCheck={setCategorieCheck} questionCounter={questionCounter} setQuestionCounter={setQuestionCounter} setQuestPopUp={setQuestPopUp} questPopUp={questPopUp} answersRight1={answersRight1} setAnswersRight1={setAnswersRight1} answersRight2={answersRight2} setAnswersRight2={setAnswersRight2} answersRight3={answersRight3} setAnswersRight3={setAnswersRight3} answersRight4={answersRight4} setAnswersRight4={setAnswersRight4} answersRight5={answersRight5} setAnswersRight5={setAnswersRight5} answersRight6={answersRight6} setAnswersRight6={setAnswersRight6}/>} />
               <Route path ="/SignUp" element={<SignUp />} /> 
-              <Route path ="/SignIn" element={<SignIn />} />
+              <Route path ="/SignIn" element={<SignIn setUser={setUser} setToken={setToken} />} />
               <Route path ="/scoreboard" element={<Scoreboard />} />
             </Routes>
           </Grid>
