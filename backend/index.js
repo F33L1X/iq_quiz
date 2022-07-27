@@ -1,6 +1,6 @@
 const express = require('express')  //middleware //node index.js
 const { v4: uuidv4 } = require('uuid');    //backendspezifisch  ... or using CommonJS syntax:
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcrypt')
 
 const app = express()
 const port = 8000   //react nutzt 3000
