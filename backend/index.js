@@ -1,6 +1,10 @@
 const express = require('express')  //middleware //node index.js
 const { v4: uuidv4 } = require('uuid');    //backendspezifisch  ... or using CommonJS syntax:
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
+
+app.use(cors())
+app.use(express.json())
 
 const app = express()
 const port = 8000   //react nutzt 3000
@@ -1451,6 +1455,10 @@ app.get('/api/quizgame', (req, res) => {
 })
 
 //Game Categories End   <-----
+
+app.get('/', (req, res) => {
+  res.send('Hello World')
+})
 
 
   
