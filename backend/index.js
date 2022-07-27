@@ -2,9 +2,11 @@ const express = require('express')  //middleware //node index.js
 const { v4: uuidv4 } = require('uuid');    //backendspezifisch  ... or using CommonJS syntax:
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+//var cors = require('cors')
 
-app.use(cors())
-app.use(express.json())
+
+//app.use(cors())
+//app.use(express.json())
 
 const app = express()
 const port = 8000   //react nutzt 3000
@@ -18,64 +20,7 @@ app.use(async (req, res, next) => {   //middleware
 //mongodb+srv://quizadmin:quizadmin3@cluster0.hsbd0.mongodb.net/?retryWrites=true&w=majority  //connectionString ->MongoDB verbingdung (Mongoose benötigt)
 //regestrierung und login aus social project
 
-app.post('/api/register', async (req, res) => {
-	console.log(req.body)
-	try {
-		const newPassword = await bcrypt.hash(req.body.password, 10)
-		await User.create({
-			username: req.body.username,
-			password: newPassword,
-		})
-		res.json({ status: 'ok' })
-	} catch (err) {
-        console.log(err)
-		res.json({ status: 'error', error: 'Duplicate username' })
-	}
-})
-
-app.post('/api/login', async (req,res) => {
-  const user = await User.findOne({
-		username: req.body.username,
-	})
-
-	if (!user) {
-		console.log("wwww")
-		res.status(401).send({ status: 'error', error: 'Invalid login' });
-		return;
-	}
-
-	const isPasswordValid = await bcrypt.compare(
-		req.body.password,
-		user.password
-	)
-
-    if (isPasswordValid) {
-		const token = jwt.sign(
-			{
-				username: user.username,
-			},
-			'secret123'
-		)
-
-		res.json({ status: 'ok', access: token });
-		return;
-	} else {
-		res.status(401).json({ status: 'error', access: false });
-		return;
-	}
-})
-
-
-var categories = [
-  "Weltraum",
-  "Natur",
-  "Geschichte",
-  "Physik",
-  "Geografie",
-  "Menschen"
-]
-
- const questionSchema = new mongoose.Schema({
+const questionSchema = new mongoose.Schema({
   id: String,
   Kategorie: String,
   question: String,
@@ -98,9 +43,9 @@ var categories = [
 }) 
 
 const userSchema = new mongoose.Schema({
-eMail: String,
+username: String,
 password: String,
-name: String,
+nickname: String,
 gameStage: Boolean,
 score: {
   Weltraum: Number,  
@@ -1414,6 +1359,67 @@ var questions = [
   }
  }
 ] 
+
+
+
+app.post('/api/register', async (req, res) => {
+	console.log(req.body)
+	try {
+		const newPassword = await bcrypt.hash(req.body.password, 10)
+		await User.create({
+			username: req.body.username,
+			password: newPassword,
+		})
+		res.json({ status: 'ok' })
+	} catch (err) {
+        console.log(err)
+		res.json({ status: 'error', error: 'Duplicate username' })
+	}
+})
+
+app.post('/api/login', async (req,res) => {
+  const user = await User.findOne({
+		username: req.body.username,
+	})
+
+	if (!user) {
+		console.log("wwww")
+		res.status(401).send({ status: 'error', error: 'Invalid login' });
+		return;
+	}
+
+	const isPasswordValid = await bcrypt.compare(
+		req.body.password,
+		user.password
+	)
+
+    if (isPasswordValid) {
+		const token = jwt.sign(
+			{
+				username: user.username,
+			},
+			'secret123'
+		)
+
+		res.json({ status: 'ok', access: token });
+		return;
+	} else {
+		res.status(401).json({ status: 'error', access: false });
+		return;
+	}
+})
+
+
+var categories = [
+  "Weltraum",
+  "Natur",
+  "Geschichte",
+  "Physik",
+  "Geografie",
+  "Menschen"
+]
+
+ 
 //kann gelöscht werden
 
 /* app.get('/api/savequestion', async (req, res) => {    //http://localhost:8000/api/questions?id=1
