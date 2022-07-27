@@ -28,6 +28,7 @@ app.post('/api/register', async (req, res) => {
 		res.json({ status: 'error', error: 'Duplicate username' })
 	}
 })
+
 app.post('/api/login', async (req,res) => {
   const user = await User.findOne({
 		username: req.body.username,

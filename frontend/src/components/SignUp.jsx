@@ -7,8 +7,9 @@ import axios from 'axios';
 
 const LOCAL_STORAGE_KEY = "token";
 
-function Login ({setUser, setToken}) {
+function SignUp ({setUser, setToken}) {
     const [username, setUsername] = useState("")
+    const [usernickname, setUsernickname] = useState("")
     const [password, setPassword] = useState("")
     const [showErrorMessage, setShowErrorMessage] = useState(false)
 
@@ -17,9 +18,10 @@ function Login ({setUser, setToken}) {
     async function handleLogin(event) {
         const credentials = {
             username: username,
-            password: password
+            password: password,
+            usernickname: usernickname
         }
-        const URL = "http://localhost:3001/api/login"
+        const URL = "http://localhost:3000/api/register"
         const result = await axios(URL, {
             headers: {
                 'Content-Type': 'application/json',
@@ -63,10 +65,10 @@ function Login ({setUser, setToken}) {
   <div>
     <div className='SignupContainer'>
       <p style={{color:"white"}}>E-Mail:</p>
-      <input placeholder="E-Mail"> 
+      <input value={username} onChange={(e) => setUsername(e.target.value)} placeholder="E-Mail"> 
       </input>
       <p style={{color:"white"}}>Password:</p>
-      <input placeholder="Password"> 
+      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password'> 
       </input>
       <p style={{color:"white"}}>Name:</p>
       <input placeholder="Name"> 
@@ -76,10 +78,13 @@ function Login ({setUser, setToken}) {
       
     </div>
     <div className='SubmitContainer'>
-      <Button className='SubmitButton' variant="contained" onClick={Submit}>Submit</Button>
+      <Button onClick={handleLogin} className='SubmitButton' variant="contained">Submit</Button>
     </div>
   </div>
   
   )
 }
-export default Login;
+export default SignUp;
+
+
+
