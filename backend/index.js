@@ -6,11 +6,14 @@ const jwt = require('jsonwebtoken')
 
 
 //app.use(cors())
-//app.use(express.json())
+
 
 const app = express()
 const port = 8000   //react nutzt 3000
 const mongoose = require('mongoose');
+const { restart } = require('nodemon');
+
+app.use(express.json())
 
 app.use(async (req, res, next) => {   //middleware
   await mongoose.connect("mongodb+srv://quizadmin:quizadmin3@cluster0.hsbd0.mongodb.net/?retryWrites=true&w=majority");  //middleware beim starten verbindung zur datenbank
@@ -42,7 +45,7 @@ const questionSchema = new mongoose.Schema({
   }
 }) 
 
-const userSchema = new mongoose.Schema({
+/* const userSchema = new mongoose.Schema({
 username: String,
 password: String,
 nickname: String,
@@ -55,10 +58,15 @@ score: {
   Geografie: Number,
   Menschen: Number
 }
-})
+}) */
+
+const userSchema = new mongoose.Schema({
+  username: String,
+  password: String,
+  })
 
 const Question = mongoose.model("questions", questionSchema)  
-const User = mongoose.model("user", userSchema)
+const User = mongoose.model("users", userSchema)
 
 
 var questions = [   
@@ -1369,6 +1377,7 @@ app.post('/api/register', async (req, res) => {
 		await User.create({
 			username: req.body.username,
 			password: newPassword,
+      //nickname: req.body.nickname
 		})
 		res.json({ status: 'ok' })
 	} catch (err) {
@@ -1378,9 +1387,18 @@ app.post('/api/register', async (req, res) => {
 })
 
 app.post('/api/login', async (req,res) => {
+  console.log(req.body)
+  //res.status(200).send("ok")
   const user = await User.findOne({
-		username: req.body.username,
+	  username: req.body.username,
 	})
+  console.log(user)
+
+  /* const doc = await User({
+    username:"test3",
+    password:"test3"
+  });
+  await doc.save() */
 
 	if (!user) {
 		console.log("wwww")

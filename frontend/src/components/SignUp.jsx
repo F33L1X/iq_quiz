@@ -11,6 +11,7 @@ function SignUp ({setUser, setToken}) {
     const [username, setUsername] = useState("")
     const [usernickname, setUsernickname] = useState("")
     const [password, setPassword] = useState("")
+    const [nickname, setNickname] = useState("")
     const [showErrorMessage, setShowErrorMessage] = useState(false)
 
     
@@ -19,9 +20,9 @@ function SignUp ({setUser, setToken}) {
         const credentials = {
             username: username,
             password: password,
-            usernickname: usernickname
+            nickname: usernickname
         }
-        const URL = "http://localhost:3000/api/register"
+        const URL = "/api/register"
         const result = await axios(URL, {
             headers: {
                 'Content-Type': 'application/json',
@@ -71,12 +72,10 @@ function SignUp ({setUser, setToken}) {
       <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password'> 
       </input>
       <p style={{color:"white"}}>Name:</p>
-      <input placeholder="Name"> 
+      <input placeholder="Name" onChange={(e) => setNickname(e.target.value)}> 
       </input>
-      
-      
-      
     </div>
+
     <div className='SubmitContainer'>
       <Button onClick={handleLogin} className='SubmitButton' variant="contained">Submit</Button>
     </div>

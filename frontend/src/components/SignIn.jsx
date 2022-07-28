@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import ReactDOM from 'react-dom/client';
+//import ReactDOM from 'react-dom/client';
 import Button from '@mui/material/Button';
 import {useNavigate} from 'react-router-dom';
-import styled from 'styled-components' ;
+//import styled from 'styled-components' ;
 import axios from 'axios';
 
 const LOCAL_STORAGE_KEY = "token";
@@ -19,7 +19,7 @@ function SignIn ({setUser, setToken}) {
             username: username,
             password: password
         }
-        const URL = "http://localhost:3000/api/register"
+        const URL = "/api/login"
         const result = await axios(URL, {
             headers: {
                 'Content-Type': 'application/json',
@@ -30,8 +30,8 @@ function SignIn ({setUser, setToken}) {
         console.log(result);
 
         if (result.status === 401) {
-            console.log("Fehler")
-            setShowErrorMessage(true)
+            //console.log("Fehler")
+            //setShowErrorMessage(true)
         } else {
             // Parsen der JSON Informationen (Erzeugt ein Promise Objekt)
             const data = await result.json();
