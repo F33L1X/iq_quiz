@@ -27,7 +27,7 @@ async function loadQuestions() {
   };
   
   const response = await axios(config); 
-  console.log(response)
+  //console.log(response)
   return response.data;
 }
 
