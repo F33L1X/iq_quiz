@@ -32,7 +32,7 @@ function SignIn ({setUser, setToken}) {
         console.log(result);
 
         if (result.status === 401) {
-            //console.log("Fehler")
+            console.log("Fehler")
             //setShowErrorMessage(true)
         } else {
             // Parsen der JSON Informationen (Erzeugt ein Promise Objekt)
