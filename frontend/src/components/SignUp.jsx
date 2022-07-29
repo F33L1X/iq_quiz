@@ -9,15 +9,27 @@ const LOCAL_STORAGE_KEY = "token";
 
 function SignUp ({setUser, setToken}) {
     const [username, setUsername] = useState("")
-    const [usernickname, setUsernickname] = useState("")
     const [password, setPassword] = useState("")
     const [nickname, setNickname] = useState("")
     const [showErrorMessage, setShowErrorMessage] = useState(false)
 
     
 
-    async function handleLogin(event) {
-        const credentials = {
+  async function handleInputChange(event) {
+
+    const handleInputChange = (e) => {
+      const {id , value} = e.target;
+      if(id === "username"){
+          setUsername(value);
+      }
+      if(id === "password"){
+          setPassword(value);
+      }
+    }
+    const handleSubmit  = () => {
+      console.log(username,password);
+    }
+        /* const credentials = {
             username: username,
             password: password,
             nickname: usernickname
@@ -48,10 +60,10 @@ function SignUp ({setUser, setToken}) {
             console.log(username);
             setUser(username)
             // fetch mit POST und Body
-        }
+        } */
 
         
-    }
+  }
 
 
 
@@ -66,18 +78,18 @@ function SignUp ({setUser, setToken}) {
   <div>
     <div className='SignupContainer'>
       <p style={{color:"white"}}>E-Mail:</p>
-      <input value={username} onChange={(e) => setUsername(e.target.value)} placeholder="E-Mail"> 
+      <input value={username} onChange = {(e) => handleInputChange(e)} id="username" placeholder="E-Mail"> 
       </input>
       <p style={{color:"white"}}>Password:</p>
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Password'> 
+      <input type="password" value={password} onChange = {(e) => handleInputChange(e)} id="password" placeholder='Password'> 
       </input>
       <p style={{color:"white"}}>Name:</p>
-      <input placeholder="Name" onChange={(e) => setNickname(e.target.value)}> 
-      </input>
+      {/* <input placeholder="Name" onChange = {(e) => handleInputChange(e)} id="password" placeholder='nickname'> 
+      </input> */}
     </div>
 
     <div className='SubmitContainer'>
-      <Button onClick={handleLogin} className='SubmitButton' variant="contained">Submit</Button>
+      <Button onClick={()=>handleSubmit()} className='SubmitButton' variant="contained">Submit</Button>
     </div>
   </div>
   
