@@ -29,7 +29,7 @@ function SignIn ({setUser, setToken}) {
             method: "POST",
             body: JSON.stringify(credentials)
         });
-        console.log(result);
+        console.log("result");
 
         if (result.status === 401) {
             console.log("Fehler")

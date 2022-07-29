@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from '@mui/material/Button';
 //import {useNavigate} from 'react-router-dom';
 //import styled from 'styled-components' ;
-//import axios from 'axios';
+import axios from 'axios';
 
 //const LOCAL_STORAGE_KEY = "token";
 
@@ -25,8 +25,10 @@ export default function SignUp ({setUser, setToken}) {
     }
 
     const handleSubmit  = () => {
-      const URL = "/api/register"
-      
+      axios.post('/api/register', {
+        username: username,
+        password: password
+      }) 
     }
 
   return (
