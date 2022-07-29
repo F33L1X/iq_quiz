@@ -11,10 +11,12 @@ function SignIn ({setUser, setToken}) {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [showErrorMessage, setShowErrorMessage] = useState(false)
+    const navigate = useNavigate();
 
     
 
     async function handleLogin(event) {
+        
         const credentials = {
             username: username,
             password: password
@@ -47,12 +49,12 @@ function SignIn ({setUser, setToken}) {
             // fetch mit POST und Body
         }
 
-        
+        navigate ('/'); 
     }
 
 
 
-  const navigate = useNavigate();
+  
 
   function Submit (){
     navigate ('/');
