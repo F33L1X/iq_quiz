@@ -72,7 +72,7 @@ const User = mongoose.model("users", userSchema)
 var questions = [   
   //Weltall
   {
-    id: "111",
+    id: "1",
     Kategorie: "Weltraum",
     question: "Welcher Planet unseres Sonnensystems ist am dichtesten zur Sonne",
     answerA: {
